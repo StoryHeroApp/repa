@@ -169,15 +169,22 @@ def analyze_images(listing_content: str, max_images: int = 5) -> str:
     if not api_key:
         return "Image analysis skipped (no API key)"
     
-    # Extract image URLs from markdown
-    pattern = r'!\[.*?\]\((https://[^\)]+\.jpg)\)'
-    urls = re.findall(pattern, listing_content)
+    # Extract image URLs from markdown - support multiple image formats
+    pattern = r'!\[.*?\]\((https://[^\)]+\.(?:jpg|jpeg|png|webp))\)'
+    urls = re.findall(pattern, listing_content, re.IGNORECASE)
+    
+    # If no markdown images found, try to extract raw image URLs
+    if not urls:
+        pattern_raw = r'https://[^\s<>"]+\.(?:jpg|jpeg|png|webp)'
+        urls = re.findall(pattern_raw, listing_content, re.IGNORECASE)
     
     if not urls:
         return "No images found to analyze"
     
     # Limit images
     urls = list(set(urls))[:max_images]
+    
+    print(f"[Image Analysis] Found {len(urls)} unique images to analyze")
     
     analyses = []
     for idx, url in enumerate(urls):
@@ -370,7 +377,9 @@ async def chat(request: ChatRequest):
             raise HTTPException(status_code=500, detail=f"Error scraping listing: {listing_data['error']}")
         
         # Step 3: Analyze images (optional, can be skipped for speed)
+        print(f"[Debug] Starting image analysis...")
         image_analysis = analyze_images(listing_data.get('content', ''), max_images=3)
+        print(f"[Debug] Image analysis result: {image_analysis[:200]}...")  # First 200 chars
         
         # Step 4: Generate match report
         match_report = generate_match_report(criteria, listing_data, image_analysis)
