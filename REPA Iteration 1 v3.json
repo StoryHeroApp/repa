@@ -1,0 +1,2908 @@
+{
+  "data": {
+    "edges": [
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInput",
+            "id": "ChatInput-hcpfZ",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "chat_input",
+            "id": "PythonREPLComponent-VI4Vt",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__ChatInput-hcpfZ{œdataTypeœ:œChatInputœ,œidœ:œChatInput-hcpfZœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-PythonREPLComponent-VI4Vt{œfieldNameœ:œchat_inputœ,œidœ:œPythonREPLComponent-VI4Vtœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ChatInput-hcpfZ",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-hcpfZœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "PythonREPLComponent-VI4Vt",
+        "targetHandle": "{œfieldNameœ:œchat_inputœ,œidœ:œPythonREPLComponent-VI4Vtœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Prompt Template",
+            "id": "Prompt Template-nIOv4",
+            "name": "prompt",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "LanguageModelComponent-PM4ys",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__Prompt Template-nIOv4{œdataTypeœ:œPrompt Templateœ,œidœ:œPrompt Template-nIOv4œ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-LanguageModelComponent-PM4ys{œfieldNameœ:œinput_valueœ,œidœ:œLanguageModelComponent-PM4ysœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "Prompt Template-nIOv4",
+        "sourceHandle": "{œdataTypeœ:œPrompt Templateœ,œidœ:œPrompt Template-nIOv4œ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "LanguageModelComponent-PM4ys",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œLanguageModelComponent-PM4ysœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInputURLParser",
+            "id": "PythonREPLComponent-VI4Vt",
+            "name": "parsed",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_data",
+            "id": "ParserComponent-gLXY3",
+            "inputTypes": [
+              "DataFrame",
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__PythonREPLComponent-VI4Vt{œdataTypeœ:œChatInputURLParserœ,œidœ:œPythonREPLComponent-VI4Vtœ,œnameœ:œparsedœ,œoutput_typesœ:[œDataœ]}-ParserComponent-gLXY3{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-gLXY3œ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "PythonREPLComponent-VI4Vt",
+        "sourceHandle": "{œdataTypeœ:œChatInputURLParserœ,œidœ:œPythonREPLComponent-VI4Vtœ,œnameœ:œparsedœ,œoutput_typesœ:[œDataœ]}",
+        "target": "ParserComponent-gLXY3",
+        "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-gLXY3œ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ParserComponent",
+            "id": "ParserComponent-gLXY3",
+            "name": "parsed_text",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "user_request",
+            "id": "Prompt Template-nIOv4",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__ParserComponent-gLXY3{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-gLXY3œ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-Prompt Template-nIOv4{œfieldNameœ:œuser_requestœ,œidœ:œPrompt Template-nIOv4œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ParserComponent-gLXY3",
+        "sourceHandle": "{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-gLXY3œ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Prompt Template-nIOv4",
+        "targetHandle": "{œfieldNameœ:œuser_requestœ,œidœ:œPrompt Template-nIOv4œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInputURLParser",
+            "id": "PythonREPLComponent-VI4Vt",
+            "name": "parsed",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_data",
+            "id": "ParserComponent-yieT4",
+            "inputTypes": [
+              "DataFrame",
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__PythonREPLComponent-VI4Vt{œdataTypeœ:œChatInputURLParserœ,œidœ:œPythonREPLComponent-VI4Vtœ,œnameœ:œparsedœ,œoutput_typesœ:[œDataœ]}-ParserComponent-yieT4{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-yieT4œ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "PythonREPLComponent-VI4Vt",
+        "sourceHandle": "{œdataTypeœ:œChatInputURLParserœ,œidœ:œPythonREPLComponent-VI4Vtœ,œnameœ:œparsedœ,œoutput_typesœ:[œDataœ]}",
+        "target": "ParserComponent-yieT4",
+        "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-yieT4œ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ParserComponent",
+            "id": "ParserComponent-yieT4",
+            "name": "parsed_text",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "url",
+            "id": "FirecrawlScrapeApi-U6Xaz",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__ParserComponent-yieT4{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-yieT4œ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-FirecrawlScrapeApi-U6Xaz{œfieldNameœ:œurlœ,œidœ:œFirecrawlScrapeApi-U6Xazœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ParserComponent-yieT4",
+        "sourceHandle": "{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-yieT4œ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "FirecrawlScrapeApi-U6Xaz",
+        "targetHandle": "{œfieldNameœ:œurlœ,œidœ:œFirecrawlScrapeApi-U6Xazœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "FirecrawlSingleURLScraper",
+            "id": "FirecrawlScrapeApi-U6Xaz",
+            "name": "data",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "scraped_data",
+            "id": "PythonREPLComponent-M6s97",
+            "inputTypes": [
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__FirecrawlScrapeApi-U6Xaz{œdataTypeœ:œFirecrawlSingleURLScraperœ,œidœ:œFirecrawlScrapeApi-U6Xazœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}-PythonREPLComponent-M6s97{œfieldNameœ:œscraped_dataœ,œidœ:œPythonREPLComponent-M6s97œ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "FirecrawlScrapeApi-U6Xaz",
+        "sourceHandle": "{œdataTypeœ:œFirecrawlSingleURLScraperœ,œidœ:œFirecrawlScrapeApi-U6Xazœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}",
+        "target": "PythonREPLComponent-M6s97",
+        "targetHandle": "{œfieldNameœ:œscraped_dataœ,œidœ:œPythonREPLComponent-M6s97œ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "LanguageModelComponent",
+            "id": "LanguageModelComponent-PM4ys",
+            "name": "text_output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "user_criteria",
+            "id": "Prompt Template-FCrln",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__LanguageModelComponent-PM4ys{œdataTypeœ:œLanguageModelComponentœ,œidœ:œLanguageModelComponent-PM4ysœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}-Prompt Template-FCrln{œfieldNameœ:œuser_criteriaœ,œidœ:œPrompt Template-FCrlnœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "LanguageModelComponent-PM4ys",
+        "sourceHandle": "{œdataTypeœ:œLanguageModelComponentœ,œidœ:œLanguageModelComponent-PM4ysœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Prompt Template-FCrln",
+        "targetHandle": "{œfieldNameœ:œuser_criteriaœ,œidœ:œPrompt Template-FCrlnœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "FormatListingInput",
+            "id": "PythonREPLComponent-M6s97",
+            "name": "formatted_text",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "listing_data",
+            "id": "Prompt Template-FCrln",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__PythonREPLComponent-M6s97{œdataTypeœ:œFormatListingInputœ,œidœ:œPythonREPLComponent-M6s97œ,œnameœ:œformatted_textœ,œoutput_typesœ:[œMessageœ]}-Prompt Template-FCrln{œfieldNameœ:œlisting_dataœ,œidœ:œPrompt Template-FCrlnœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "PythonREPLComponent-M6s97",
+        "sourceHandle": "{œdataTypeœ:œFormatListingInputœ,œidœ:œPythonREPLComponent-M6s97œ,œnameœ:œformatted_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Prompt Template-FCrln",
+        "targetHandle": "{œfieldNameœ:œlisting_dataœ,œidœ:œPrompt Template-FCrlnœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "LanguageModelComponent",
+            "id": "LanguageModelComponent-grVfv",
+            "name": "text_output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "ChatOutput-73spi",
+            "inputTypes": [
+              "Data",
+              "DataFrame",
+              "Message"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__LanguageModelComponent-grVfv{œdataTypeœ:œLanguageModelComponentœ,œidœ:œLanguageModelComponent-grVfvœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}-ChatOutput-73spi{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-73spiœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "LanguageModelComponent-grVfv",
+        "sourceHandle": "{œdataTypeœ:œLanguageModelComponentœ,œidœ:œLanguageModelComponent-grVfvœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "ChatOutput-73spi",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-73spiœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "FormatListingInput",
+            "id": "PythonREPLComponent-M6s97",
+            "name": "formatted_text",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "listing_content",
+            "id": "PythonREPLComponent-dWQ1m",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__PythonREPLComponent-M6s97{œdataTypeœ:œFormatListingInputœ,œidœ:œPythonREPLComponent-M6s97œ,œnameœ:œformatted_textœ,œoutput_typesœ:[œMessageœ]}-PythonREPLComponent-dWQ1m{œfieldNameœ:œlisting_contentœ,œidœ:œPythonREPLComponent-dWQ1mœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "PythonREPLComponent-M6s97",
+        "sourceHandle": "{œdataTypeœ:œFormatListingInputœ,œidœ:œPythonREPLComponent-M6s97œ,œnameœ:œformatted_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "PythonREPLComponent-dWQ1m",
+        "targetHandle": "{œfieldNameœ:œlisting_contentœ,œidœ:œPythonREPLComponent-dWQ1mœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ApartmentMatchingPrompt",
+            "id": "Prompt Template-FCrln",
+            "name": "prompt",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "LanguageModelComponent-grVfv",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__Prompt Template-FCrln{œdataTypeœ:œApartmentMatchingPromptœ,œidœ:œPrompt Template-FCrlnœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-LanguageModelComponent-grVfv{œfieldNameœ:œinput_valueœ,œidœ:œLanguageModelComponent-grVfvœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "Prompt Template-FCrln",
+        "sourceHandle": "{œdataTypeœ:œApartmentMatchingPromptœ,œidœ:œPrompt Template-FCrlnœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "LanguageModelComponent-grVfv",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œLanguageModelComponent-grVfvœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ApartmentImageAnalyzer",
+            "id": "PythonREPLComponent-dWQ1m",
+            "name": "analysis",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "image_analysis",
+            "id": "Prompt Template-FCrln",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__PythonREPLComponent-dWQ1m{œdataTypeœ:œApartmentImageAnalyzerœ,œidœ:œPythonREPLComponent-dWQ1mœ,œnameœ:œanalysisœ,œoutput_typesœ:[œMessageœ]}-Prompt Template-FCrln{œfieldNameœ:œimage_analysisœ,œidœ:œPrompt Template-FCrlnœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "PythonREPLComponent-dWQ1m",
+        "sourceHandle": "{œdataTypeœ:œApartmentImageAnalyzerœ,œidœ:œPythonREPLComponent-dWQ1mœ,œnameœ:œanalysisœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Prompt Template-FCrln",
+        "targetHandle": "{œfieldNameœ:œimage_analysisœ,œidœ:œPrompt Template-FCrlnœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "id": "ChatInput-hcpfZ",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Get chat inputs from the Playground.",
+            "display_name": "Chat Input",
+            "documentation": "https://docs.langflow.org/components-io#chat-input",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "should_store_message",
+              "sender",
+              "sender_name",
+              "session_id",
+              "files"
+            ],
+            "frozen": false,
+            "icon": "MessagesSquare",
+            "legacy": false,
+            "lf_version": "1.6.2",
+            "metadata": {},
+            "minimized": true,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Chat Message",
+                "group_outputs": false,
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.data.utils import IMG_FILE_TYPES, TEXT_FILE_TYPES\nfrom langflow.base.io.chat import ChatComponent\nfrom langflow.inputs.inputs import BoolInput\nfrom langflow.io import (\n    DropdownInput,\n    FileInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n)\nfrom langflow.schema.message import Message\nfrom langflow.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_USER,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatInput(ChatComponent):\n    display_name = \"Chat Input\"\n    description = \"Get chat inputs from the Playground.\"\n    documentation: str = \"https://docs.langflow.org/components-io#chat-input\"\n    icon = \"MessagesSquare\"\n    name = \"ChatInput\"\n    minimized = True\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Input Text\",\n            value=\"\",\n            info=\"Message to be passed as input.\",\n            input_types=[],\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_USER,\n            info=\"Type of sender.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_USER,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        FileInput(\n            name=\"files\",\n            display_name=\"Files\",\n            file_types=TEXT_FILE_TYPES + IMG_FILE_TYPES,\n            info=\"Files to be sent with the message.\",\n            advanced=True,\n            is_list=True,\n            temp_file=True,\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Chat Message\", name=\"message\", method=\"message_response\"),\n    ]\n\n    async def message_response(self) -> Message:\n        # Ensure files is a list and filter out empty/None values\n        files = self.files if self.files else []\n        if files and not isinstance(files, list):\n            files = [files]\n        files = [f for f in files if f is not None and f != \"\"]\n\n        message = await Message.create(\n            text=self.input_value,\n            sender=self.sender,\n            sender_name=self.sender_name,\n            session_id=self.session_id,\n            files=files,\n        )\n        if self.session_id and isinstance(message, Message) and self.should_store_message:\n            stored_message = await self.send_message(\n                message,\n            )\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n"
+              },
+              "files": {
+                "_input_type": "FileInput",
+                "advanced": true,
+                "display_name": "Files",
+                "dynamic": false,
+                "fileTypes": [
+                  "csv",
+                  "json",
+                  "pdf",
+                  "txt",
+                  "md",
+                  "mdx",
+                  "yaml",
+                  "yml",
+                  "xml",
+                  "html",
+                  "htm",
+                  "docx",
+                  "py",
+                  "sh",
+                  "sql",
+                  "js",
+                  "ts",
+                  "tsx",
+                  "jpg",
+                  "jpeg",
+                  "png",
+                  "bmp",
+                  "image"
+                ],
+                "file_path": "",
+                "info": "Files to be sent with the message.",
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "files",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "temp_file": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "file",
+                "value": ""
+              },
+              "input_value": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Input Text",
+                "dynamic": false,
+                "info": "Message to be passed as input.",
+                "input_types": [],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "sender": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Sender Type",
+                "dynamic": false,
+                "external_options": {},
+                "info": "Type of sender.",
+                "name": "sender",
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "User"
+              },
+              "sender_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Sender Name",
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "sender_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "User"
+              },
+              "session_id": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Session ID",
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "session_id",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "should_store_message": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Store Messages",
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "should_store_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": false,
+          "type": "ChatInput"
+        },
+        "dragging": false,
+        "id": "ChatInput-hcpfZ",
+        "measured": {
+          "height": 48,
+          "width": 192
+        },
+        "position": {
+          "x": 769.7266620304542,
+          "y": 31.15476214347911
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "LanguageModelComponent-PM4ys",
+          "node": {
+            "base_classes": [
+              "LanguageModel",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Runs a language model given a specified provider.",
+            "display_name": "LLM -> Extract User Criteria",
+            "documentation": "https://docs.langflow.org/components-models",
+            "edited": false,
+            "field_order": [
+              "provider",
+              "model_name",
+              "api_key",
+              "input_value",
+              "system_message",
+              "stream",
+              "temperature"
+            ],
+            "frozen": false,
+            "icon": "brain-circuit",
+            "last_updated": "2025-11-08T12:21:05.711Z",
+            "legacy": false,
+            "lf_version": "1.6.2",
+            "metadata": {
+              "keywords": [
+                "model",
+                "llm",
+                "language model",
+                "large language model"
+              ]
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Model Response",
+                "group_outputs": false,
+                "method": "text_response",
+                "name": "text_output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Language Model",
+                "group_outputs": false,
+                "method": "build_model",
+                "name": "model_output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "LanguageModel",
+                "tool_mode": true,
+                "types": [
+                  "LanguageModel"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "priority": 0,
+            "template": {
+              "_type": "Component",
+              "api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "OpenAI API Key",
+                "dynamic": false,
+                "info": "Model Provider API key",
+                "input_types": [],
+                "load_from_db": true,
+                "name": "api_key",
+                "password": true,
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from typing import Any\n\nfrom langchain_anthropic import ChatAnthropic\nfrom langchain_google_genai import ChatGoogleGenerativeAI\nfrom langchain_openai import ChatOpenAI\n\nfrom langflow.base.models.anthropic_constants import ANTHROPIC_MODELS\nfrom langflow.base.models.google_generative_ai_constants import GOOGLE_GENERATIVE_AI_MODELS\nfrom langflow.base.models.model import LCModelComponent\nfrom langflow.base.models.openai_constants import OPENAI_CHAT_MODEL_NAMES, OPENAI_REASONING_MODEL_NAMES\nfrom langflow.field_typing import LanguageModel\nfrom langflow.field_typing.range_spec import RangeSpec\nfrom langflow.inputs.inputs import BoolInput\nfrom langflow.io import DropdownInput, MessageInput, MultilineInput, SecretStrInput, SliderInput\nfrom langflow.schema.dotdict import dotdict\n\n\nclass LanguageModelComponent(LCModelComponent):\n    display_name = \"Language Model\"\n    description = \"Runs a language model given a specified provider.\"\n    documentation: str = \"https://docs.langflow.org/components-models\"\n    icon = \"brain-circuit\"\n    category = \"models\"\n    priority = 0  # Set priority to 0 to make it appear first\n\n    inputs = [\n        DropdownInput(\n            name=\"provider\",\n            display_name=\"Model Provider\",\n            options=[\"OpenAI\", \"Anthropic\", \"Google\"],\n            value=\"OpenAI\",\n            info=\"Select the model provider\",\n            real_time_refresh=True,\n            options_metadata=[{\"icon\": \"OpenAI\"}, {\"icon\": \"Anthropic\"}, {\"icon\": \"GoogleGenerativeAI\"}],\n        ),\n        DropdownInput(\n            name=\"model_name\",\n            display_name=\"Model Name\",\n            options=OPENAI_CHAT_MODEL_NAMES + OPENAI_REASONING_MODEL_NAMES,\n            value=OPENAI_CHAT_MODEL_NAMES[0],\n            info=\"Select the model to use\",\n            real_time_refresh=True,\n        ),\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"OpenAI API Key\",\n            info=\"Model Provider API key\",\n            required=False,\n            show=True,\n            real_time_refresh=True,\n        ),\n        MessageInput(\n            name=\"input_value\",\n            display_name=\"Input\",\n            info=\"The input text to send to the model\",\n        ),\n        MultilineInput(\n            name=\"system_message\",\n            display_name=\"System Message\",\n            info=\"A system message that helps set the behavior of the assistant\",\n            advanced=False,\n        ),\n        BoolInput(\n            name=\"stream\",\n            display_name=\"Stream\",\n            info=\"Whether to stream the response\",\n            value=False,\n            advanced=True,\n        ),\n        SliderInput(\n            name=\"temperature\",\n            display_name=\"Temperature\",\n            value=0.1,\n            info=\"Controls randomness in responses\",\n            range_spec=RangeSpec(min=0, max=1, step=0.01),\n            advanced=True,\n        ),\n    ]\n\n    def build_model(self) -> LanguageModel:\n        provider = self.provider\n        model_name = self.model_name\n        temperature = self.temperature\n        stream = self.stream\n\n        if provider == \"OpenAI\":\n            if not self.api_key:\n                msg = \"OpenAI API key is required when using OpenAI provider\"\n                raise ValueError(msg)\n\n            if model_name in OPENAI_REASONING_MODEL_NAMES:\n                # reasoning models do not support temperature (yet)\n                temperature = None\n\n            return ChatOpenAI(\n                model_name=model_name,\n                temperature=temperature,\n                streaming=stream,\n                openai_api_key=self.api_key,\n            )\n        if provider == \"Anthropic\":\n            if not self.api_key:\n                msg = \"Anthropic API key is required when using Anthropic provider\"\n                raise ValueError(msg)\n            return ChatAnthropic(\n                model=model_name,\n                temperature=temperature,\n                streaming=stream,\n                anthropic_api_key=self.api_key,\n            )\n        if provider == \"Google\":\n            if not self.api_key:\n                msg = \"Google API key is required when using Google provider\"\n                raise ValueError(msg)\n            return ChatGoogleGenerativeAI(\n                model=model_name,\n                temperature=temperature,\n                streaming=stream,\n                google_api_key=self.api_key,\n            )\n        msg = f\"Unknown provider: {provider}\"\n        raise ValueError(msg)\n\n    def update_build_config(self, build_config: dotdict, field_value: Any, field_name: str | None = None) -> dotdict:\n        if field_name == \"provider\":\n            if field_value == \"OpenAI\":\n                build_config[\"model_name\"][\"options\"] = OPENAI_CHAT_MODEL_NAMES + OPENAI_REASONING_MODEL_NAMES\n                build_config[\"model_name\"][\"value\"] = OPENAI_CHAT_MODEL_NAMES[0]\n                build_config[\"api_key\"][\"display_name\"] = \"OpenAI API Key\"\n            elif field_value == \"Anthropic\":\n                build_config[\"model_name\"][\"options\"] = ANTHROPIC_MODELS\n                build_config[\"model_name\"][\"value\"] = ANTHROPIC_MODELS[0]\n                build_config[\"api_key\"][\"display_name\"] = \"Anthropic API Key\"\n            elif field_value == \"Google\":\n                build_config[\"model_name\"][\"options\"] = GOOGLE_GENERATIVE_AI_MODELS\n                build_config[\"model_name\"][\"value\"] = GOOGLE_GENERATIVE_AI_MODELS[0]\n                build_config[\"api_key\"][\"display_name\"] = \"Google API Key\"\n        elif field_name == \"model_name\" and field_value.startswith(\"o1\") and self.provider == \"OpenAI\":\n            # Hide system_message for o1 models - currently unsupported\n            if \"system_message\" in build_config:\n                build_config[\"system_message\"][\"show\"] = False\n        elif field_name == \"model_name\" and not field_value.startswith(\"o1\") and \"system_message\" in build_config:\n            build_config[\"system_message\"][\"show\"] = True\n        return build_config\n"
+              },
+              "input_value": {
+                "_input_type": "MessageInput",
+                "advanced": false,
+                "display_name": "Input",
+                "dynamic": false,
+                "info": "The input text to send to the model",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "model_name": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Model Name",
+                "dynamic": false,
+                "external_options": {},
+                "info": "Select the model to use",
+                "name": "model_name",
+                "options": [
+                  "gpt-4o-mini",
+                  "gpt-4o",
+                  "gpt-4.1",
+                  "gpt-4.1-mini",
+                  "gpt-4.1-nano",
+                  "gpt-4-turbo",
+                  "gpt-4-turbo-preview",
+                  "gpt-4",
+                  "gpt-3.5-turbo",
+                  "gpt-5",
+                  "gpt-5-mini",
+                  "gpt-5-nano",
+                  "gpt-5-chat-latest",
+                  "o1",
+                  "o3-mini",
+                  "o3",
+                  "o3-pro",
+                  "o4-mini",
+                  "o4-mini-high"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "gpt-4.1-nano"
+              },
+              "provider": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Model Provider",
+                "dynamic": false,
+                "external_options": {},
+                "info": "Select the model provider",
+                "name": "provider",
+                "options": [
+                  "OpenAI",
+                  "Anthropic",
+                  "Google"
+                ],
+                "options_metadata": [
+                  {
+                    "icon": "OpenAI"
+                  },
+                  {
+                    "icon": "Anthropic"
+                  },
+                  {
+                    "icon": "GoogleGenerativeAI"
+                  }
+                ],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "OpenAI"
+              },
+              "stream": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Stream",
+                "dynamic": false,
+                "info": "Whether to stream the response",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "stream",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "system_message": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "System Message",
+                "dynamic": false,
+                "info": "A system message that helps set the behavior of the assistant",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "system_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "You are an expert at extracting structured apartment rental criteria from natural language.\n\nExtract information from the user's request and return it as valid JSON.\n\nIMPORTANT: Only include fields that the user explicitly mentions. Do NOT include fields with null values.\n\nAvailable field names you may use (only if mentioned):\n- location: The city, postal code, area, or proximity requirement (string)\n- min_rooms: Minimum number of rooms (number)\n- max_rooms: Maximum number of rooms (number)\n- min_living_space: Minimum living space in square meters (number)\n- max_living_space: Maximum living space in square meters (number)\n- min_rent: Minimum rent in CHF (number)\n- max_rent: Maximum rent in CHF (number)\n- occupants: Number of people who will live there (number)\n- duration: How long they need it (string, e.g., \"ski season\", \"6 months\", \"long-term\")\n\nFor ANY other requirements (pet-friendly, balcony, parking, proximity to amenities, etc.), add them to an \"additional_requirements\" array.\n\nExtraction Rules:\n1. If \"for X persons/people\" → use \"occupants\": X\n2. If \"ski season\" or temporary → use \"duration\": \"ski season\" or appropriate period\n3. If \"price is not a problem\" or \"budget flexible\" → do NOT include min_rent or max_rent\n4. If \"more than X rooms\" → use \"min_rooms\": X\n5. If \"less than CHF Y\" → use \"max_rent\": Y\n6. If \"about X square meters\" → use both \"min_living_space\" and \"max_living_space\" with ±10% range\n7. Location can be specific (city/postal code) OR proximity-based (\"close to ski\", \"near train station\")\n8. Extract EACH specific requirement as a separate item in additional_requirements\n9. Preserve the user's exact wording and intent\n10. Infer room requirements from occupancy if helpful (e.g., 5 persons might suggest larger apartment)\n11. Return ONLY valid JSON, no explanations\n\nExample 1 - Full numeric criteria:\nInput: \"I am looking for an apartment in 8008 Zürich, more than 4 rooms, living space about 100 square meters, and rent less than CHF 5000.\"\nOutput:\n{{\n  \"location\": \"8008 Zürich\",\n  \"min_rooms\": 4,\n  \"min_living_space\": 90,\n  \"max_living_space\": 110,\n  \"max_rent\": 5000\n}}\n\nExample 2 - Seasonal/proximity focused:\nInput: \"I'm visiting Switzerland for a ski season and need an apartment for 5 persons, need it to be super close to the ski action. Price is not a problem.\"\nOutput:\n{{\n  \"occupants\": 5,\n  \"duration\": \"ski season\",\n  \"location\": \"ski resort area\",\n  \"additional_requirements\": [\"close to ski slopes\", \"ski-in/ski-out preferred\", \"suitable for 5 people\"]\n}}\n\nExample 3 - Mixed criteria:\nInput: \"Looking for 3 rooms in Zürich, max CHF 3000, with parking space, balcony, and modern kitchen\"\nOutput:\n{{\n  \"location\": \"Zürich\",\n  \"min_rooms\": 3,\n  \"max_rent\": 3000,\n  \"additional_requirements\": [\"parking space\", \"balcony\", \"modern kitchen\"]\n}}\n\nExample 4 - Only location:\nInput: \"I need an apartment in Bern\"\nOutput:\n{{\n  \"location\": \"Bern\"\n}}\n\nNow extract the criteria:"
+              },
+              "temperature": {
+                "_input_type": "SliderInput",
+                "advanced": true,
+                "display_name": "Temperature",
+                "dynamic": false,
+                "info": "Controls randomness in responses",
+                "max_label": "",
+                "max_label_icon": "",
+                "min_label": "",
+                "min_label_icon": "",
+                "name": "temperature",
+                "placeholder": "",
+                "range_spec": {
+                  "max": 1,
+                  "min": 0,
+                  "step": 0.01,
+                  "step_type": "float"
+                },
+                "required": false,
+                "show": true,
+                "slider_buttons": false,
+                "slider_buttons_options": [],
+                "slider_input": false,
+                "title_case": false,
+                "tool_mode": false,
+                "type": "slider",
+                "value": 0.1
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "text_output",
+          "showNode": true,
+          "type": "LanguageModelComponent"
+        },
+        "dragging": false,
+        "id": "LanguageModelComponent-PM4ys",
+        "measured": {
+          "height": 534,
+          "width": 320
+        },
+        "position": {
+          "x": 1857.595086484925,
+          "y": -700.3765351960644
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "PythonREPLComponent-VI4Vt",
+          "node": {
+            "base_classes": [
+              "Data",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Parses apartment search criteria and extracts the listing URL from chat input.",
+            "display_name": "Chat Input → Criteria + URL Parser",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "chat_input"
+            ],
+            "frozen": false,
+            "icon": "link",
+            "legacy": false,
+            "lf_version": "1.6.2",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Parsed Data",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "parse_chat_input",
+                "name": "parsed",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Message (criteria only)",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "as_message",
+                "name": "message",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "chat_input": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Chat Input",
+                "dynamic": false,
+                "info": "Connect this to a Chat Input (Message) containing apartment criteria and listing URL.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "chat_input",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import re\nfrom typing import Any, Dict, List\n\nfrom langflow.custom.custom_component.component import Component\nfrom langflow.io import MultilineInput, Output\nfrom langflow.schema.data import Data\nfrom langflow.schema.message import Message\n\nclass ChatInputURLParser(Component):\n    display_name = \"Chat Input → Criteria + URL Parser\"\n    description = \"Parses apartment search criteria and extracts the listing URL from chat input.\"\n    icon = \"link\"\n\n    inputs = [\n        MultilineInput(\n            name=\"chat_input\",\n            display_name=\"Chat Input\",\n            info=\"Connect this to a Chat Input (Message) containing apartment criteria and listing URL.\",\n            input_types=[\"Message\"],\n            required=True,\n        ),\n    ]\n\n    outputs = [\n        Output(\n            display_name=\"Parsed Data\",\n            name=\"parsed\",\n            type_=Data,\n            method=\"parse_chat_input\",\n        ),\n        Output(\n            display_name=\"Message (criteria only)\",\n            name=\"message\",\n            type_=Message,\n            method=\"as_message\",\n        ),\n    ]\n\n    _URL_RE = re.compile(r\"(?i)\\b((?:https?://|www\\.)[^\\s<>\\]\\)\\\"'}]+)\")\n\n    @staticmethod\n    def _to_text(value: Any) -> str:\n        \"\"\"Convert various input types to plain text.\"\"\"\n        if value is None:\n            return \"\"\n        if isinstance(value, str):\n            return value\n        if isinstance(value, dict):\n            for key in (\"text\", \"content\", \"message\", \"input\"):\n                if key in value and isinstance(value[key], str):\n                    return value[key]\n        return str(value)\n\n    @staticmethod\n    def _strip_wrapper_tags(s: str) -> str:\n        \"\"\"Remove any <input> or similar wrapper tags.\"\"\"\n        s = re.sub(r\"</?input>\", \"\", s, flags=re.IGNORECASE).strip()\n        s = re.sub(r\"</?sample_input>\", \"\", s, flags=re.IGNORECASE).strip()\n        return s\n\n    @classmethod\n    def _extract_first_url(cls, text: str) -> str:\n        \"\"\"Extract only the first URL from the text.\"\"\"\n        match = cls._URL_RE.search(text)\n        if match:\n            url = match.group(1).strip()\n            if url.lower().startswith(\"www.\"):\n                url = \"http://\" + url\n            return url\n        return \"\"\n\n    @staticmethod\n    def _remove_url_from_text(text: str, url: str) -> str:\n        \"\"\"Remove the URL and URL-only lines from the text.\"\"\"\n        if not url:\n            return text.strip()\n        \n        lines = text.splitlines()\n        cleaned = []\n        \n        for line in lines:\n            line_stripped = line.strip()\n            # Skip lines that only contain the URL\n            if line_stripped == url:\n                continue\n            # Remove URL from lines that contain other content\n            cleaned_line = line.replace(url, \"\")\n            # Only add non-empty lines\n            cleaned_line = cleaned_line.strip()\n            if cleaned_line:\n                cleaned.append(cleaned_line)\n        \n        return \"\\n\".join(cleaned).strip()\n\n    def _parse(self) -> Dict[str, Any]:\n        \"\"\"Parse the input into message (criteria) and URL.\"\"\"\n        # Convert input to text and clean it\n        raw = self._strip_wrapper_tags(self._to_text(self.chat_input))\n        \n        # Extract only the first URL\n        url = self._extract_first_url(raw)\n        \n        # Remove URL from text to get clean criteria message\n        message_text = self._remove_url_from_text(raw, url)\n        \n        return {\n            \"message\": message_text,\n            \"url\": url\n        }\n\n    def parse_chat_input(self) -> Data:\n        \"\"\"Main parsing method that returns Data object.\"\"\"\n        try:\n            payload = self._parse()\n            url_status = \"URL found\" if payload['url'] else \"No URL found\"\n            self.log(f\"Parsed apartment search: criteria extracted, {url_status}.\")\n            return Data(data=payload)\n        except Exception as e:\n            msg = f\"Error parsing chat input: {e!s}\"\n            self.log(msg)\n            return Data(data={\"error\": msg, \"message\": \"\", \"url\": \"\"})\n\n    def as_message(self) -> Message:\n        \"\"\"Return only the criteria text as a Message—compatible with Chat/LLM input.\"\"\"\n        payload = self._parse()\n        return Message(text=payload[\"message\"])\n\n    def build(self):\n        return self.parse_chat_input\n"
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "parsed",
+          "showNode": true,
+          "type": "ChatInputURLParser"
+        },
+        "dragging": false,
+        "id": "PythonREPLComponent-VI4Vt",
+        "measured": {
+          "height": 220,
+          "width": 320
+        },
+        "position": {
+          "x": 1005.339365420966,
+          "y": -77.70722954739614
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "Prompt Template-nIOv4",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {
+              "template": [
+                "user_request"
+              ]
+            },
+            "description": "Create a prompt template with dynamic variables.",
+            "display_name": "Prompt Template",
+            "documentation": "https://docs.langflow.org/components-prompts",
+            "edited": false,
+            "error": null,
+            "field_order": [
+              "template",
+              "tool_placeholder"
+            ],
+            "frozen": false,
+            "full_path": null,
+            "icon": "braces",
+            "is_composition": null,
+            "is_input": null,
+            "is_output": null,
+            "legacy": false,
+            "lf_version": "1.6.2",
+            "metadata": {},
+            "minimized": false,
+            "name": "",
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Prompt",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "build_prompt",
+                "name": "prompt",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "priority": 0,
+            "replacement": null,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.prompts.api_utils import process_prompt_template\nfrom langflow.custom.custom_component.component import Component\nfrom langflow.inputs.inputs import DefaultPromptField\nfrom langflow.io import MessageTextInput, Output, PromptInput\nfrom langflow.schema.message import Message\nfrom langflow.template.utils import update_template_values\n\n\nclass PromptComponent(Component):\n    display_name: str = \"Prompt Template\"\n    description: str = \"Create a prompt template with dynamic variables.\"\n    documentation: str = \"https://docs.langflow.org/components-prompts\"\n    icon = \"braces\"\n    trace_type = \"prompt\"\n    name = \"Prompt Template\"\n    priority = 0  # Set priority to 0 to make it appear first\n\n    inputs = [\n        PromptInput(name=\"template\", display_name=\"Template\"),\n        MessageTextInput(\n            name=\"tool_placeholder\",\n            display_name=\"Tool Placeholder\",\n            tool_mode=True,\n            advanced=True,\n            info=\"A placeholder input for tool mode.\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Prompt\", name=\"prompt\", method=\"build_prompt\"),\n    ]\n\n    async def build_prompt(self) -> Message:\n        prompt = Message.from_template(**self._attributes)\n        self.status = prompt.text\n        return prompt\n\n    def _update_template(self, frontend_node: dict):\n        prompt_template = frontend_node[\"template\"][\"template\"][\"value\"]\n        custom_fields = frontend_node[\"custom_fields\"]\n        frontend_node_template = frontend_node[\"template\"]\n        _ = process_prompt_template(\n            template=prompt_template,\n            name=\"template\",\n            custom_fields=custom_fields,\n            frontend_node_template=frontend_node_template,\n        )\n        return frontend_node\n\n    async def update_frontend_node(self, new_frontend_node: dict, current_frontend_node: dict):\n        \"\"\"This function is called after the code validation is done.\"\"\"\n        frontend_node = await super().update_frontend_node(new_frontend_node, current_frontend_node)\n        template = frontend_node[\"template\"][\"template\"][\"value\"]\n        # Kept it duplicated for backwards compatibility\n        _ = process_prompt_template(\n            template=template,\n            name=\"template\",\n            custom_fields=frontend_node[\"custom_fields\"],\n            frontend_node_template=frontend_node[\"template\"],\n        )\n        # Now that template is updated, we need to grab any values that were set in the current_frontend_node\n        # and update the frontend_node with those values\n        update_template_values(new_template=frontend_node, previous_template=current_frontend_node[\"template\"])\n        return frontend_node\n\n    def _get_fallback_input(self, **kwargs):\n        return DefaultPromptField(**kwargs)\n"
+              },
+              "template": {
+                "_input_type": "PromptInput",
+                "advanced": false,
+                "display_name": "Template",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "prompt",
+                "value": "Now extract the criteria from the User's Request:\n<user_request>\n{user_request}\n</user_request>\n"
+              },
+              "tool_placeholder": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Tool Placeholder",
+                "dynamic": false,
+                "info": "A placeholder input for tool mode.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "tool_placeholder",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "user_request": {
+                "advanced": false,
+                "display_name": "user_request",
+                "dynamic": false,
+                "field_type": "str",
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "user_request",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "Prompt Template"
+        },
+        "dragging": false,
+        "id": "Prompt Template-nIOv4",
+        "measured": {
+          "height": 353,
+          "width": 320
+        },
+        "position": {
+          "x": 1857.1052196168112,
+          "y": -167.92874810872468
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "ParserComponent-gLXY3",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "category": "processing",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Extracts the user's message using a template.",
+            "display_name": "Parse user's message",
+            "documentation": "https://docs.langflow.org/components-processing#parser",
+            "edited": false,
+            "field_order": [
+              "input_data",
+              "mode",
+              "pattern",
+              "sep"
+            ],
+            "frozen": false,
+            "icon": "braces",
+            "key": "ParserComponent",
+            "legacy": false,
+            "lf_version": "1.6.2",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Parsed Text",
+                "group_outputs": false,
+                "method": "parse_combined_text",
+                "name": "parsed_text",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 2.220446049250313e-16,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom.custom_component.component import Component\nfrom langflow.helpers.data import safe_convert\nfrom langflow.inputs.inputs import BoolInput, HandleInput, MessageTextInput, MultilineInput, TabInput\nfrom langflow.schema.data import Data\nfrom langflow.schema.dataframe import DataFrame\nfrom langflow.schema.message import Message\nfrom langflow.template.field.base import Output\n\n\nclass ParserComponent(Component):\n    display_name = \"Parser\"\n    description = \"Extracts text using a template.\"\n    documentation: str = \"https://docs.langflow.org/components-processing#parser\"\n    icon = \"braces\"\n\n    inputs = [\n        HandleInput(\n            name=\"input_data\",\n            display_name=\"Data or DataFrame\",\n            input_types=[\"DataFrame\", \"Data\"],\n            info=\"Accepts either a DataFrame or a Data object.\",\n            required=True,\n        ),\n        TabInput(\n            name=\"mode\",\n            display_name=\"Mode\",\n            options=[\"Parser\", \"Stringify\"],\n            value=\"Parser\",\n            info=\"Convert into raw string instead of using a template.\",\n            real_time_refresh=True,\n        ),\n        MultilineInput(\n            name=\"pattern\",\n            display_name=\"Template\",\n            info=(\n                \"Use variables within curly brackets to extract column values for DataFrames \"\n                \"or key values for Data.\"\n                \"For example: `Name: {Name}, Age: {Age}, Country: {Country}`\"\n            ),\n            value=\"Text: {text}\",  # Example default\n            dynamic=True,\n            show=True,\n            required=True,\n        ),\n        MessageTextInput(\n            name=\"sep\",\n            display_name=\"Separator\",\n            advanced=True,\n            value=\"\\n\",\n            info=\"String used to separate rows/items.\",\n        ),\n    ]\n\n    outputs = [\n        Output(\n            display_name=\"Parsed Text\",\n            name=\"parsed_text\",\n            info=\"Formatted text output.\",\n            method=\"parse_combined_text\",\n        ),\n    ]\n\n    def update_build_config(self, build_config, field_value, field_name=None):\n        \"\"\"Dynamically hide/show `template` and enforce requirement based on `stringify`.\"\"\"\n        if field_name == \"mode\":\n            build_config[\"pattern\"][\"show\"] = self.mode == \"Parser\"\n            build_config[\"pattern\"][\"required\"] = self.mode == \"Parser\"\n            if field_value:\n                clean_data = BoolInput(\n                    name=\"clean_data\",\n                    display_name=\"Clean Data\",\n                    info=(\n                        \"Enable to clean the data by removing empty rows and lines \"\n                        \"in each cell of the DataFrame/ Data object.\"\n                    ),\n                    value=True,\n                    advanced=True,\n                    required=False,\n                )\n                build_config[\"clean_data\"] = clean_data.to_dict()\n            else:\n                build_config.pop(\"clean_data\", None)\n\n        return build_config\n\n    def _clean_args(self):\n        \"\"\"Prepare arguments based on input type.\"\"\"\n        input_data = self.input_data\n\n        match input_data:\n            case list() if all(isinstance(item, Data) for item in input_data):\n                msg = \"List of Data objects is not supported.\"\n                raise ValueError(msg)\n            case DataFrame():\n                return input_data, None\n            case Data():\n                return None, input_data\n            case dict() if \"data\" in input_data:\n                try:\n                    if \"columns\" in input_data:  # Likely a DataFrame\n                        return DataFrame.from_dict(input_data), None\n                    # Likely a Data object\n                    return None, Data(**input_data)\n                except (TypeError, ValueError, KeyError) as e:\n                    msg = f\"Invalid structured input provided: {e!s}\"\n                    raise ValueError(msg) from e\n            case _:\n                msg = f\"Unsupported input type: {type(input_data)}. Expected DataFrame or Data.\"\n                raise ValueError(msg)\n\n    def parse_combined_text(self) -> Message:\n        \"\"\"Parse all rows/items into a single text or convert input to string if `stringify` is enabled.\"\"\"\n        # Early return for stringify option\n        if self.mode == \"Stringify\":\n            return self.convert_to_string()\n\n        df, data = self._clean_args()\n\n        lines = []\n        if df is not None:\n            for _, row in df.iterrows():\n                formatted_text = self.pattern.format(**row.to_dict())\n                lines.append(formatted_text)\n        elif data is not None:\n            formatted_text = self.pattern.format(**data.data)\n            lines.append(formatted_text)\n\n        combined_text = self.sep.join(lines)\n        self.status = combined_text\n        return Message(text=combined_text)\n\n    def convert_to_string(self) -> Message:\n        \"\"\"Convert input data to string with proper error handling.\"\"\"\n        result = \"\"\n        if isinstance(self.input_data, list):\n            result = \"\\n\".join([safe_convert(item, clean_data=self.clean_data or False) for item in self.input_data])\n        else:\n            result = safe_convert(self.input_data or False)\n        self.log(f\"Converted to string with length: {len(result)}\")\n\n        message = Message(text=result)\n        self.status = message\n        return message\n"
+              },
+              "input_data": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Data or DataFrame",
+                "dynamic": false,
+                "info": "Accepts either a DataFrame or a Data object.",
+                "input_types": [
+                  "DataFrame",
+                  "Data"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "input_data",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "mode": {
+                "_input_type": "TabInput",
+                "advanced": false,
+                "display_name": "Mode",
+                "dynamic": false,
+                "info": "Convert into raw string instead of using a template.",
+                "name": "mode",
+                "options": [
+                  "Parser",
+                  "Stringify"
+                ],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "tab",
+                "value": "Parser"
+              },
+              "pattern": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Template",
+                "dynamic": true,
+                "info": "Use variables within curly brackets to extract column values for DataFrames or key values for Data.For example: `Name: {Name}, Age: {Age}, Country: {Country}`",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "pattern",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "{message}"
+              },
+              "sep": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Separator",
+                "dynamic": false,
+                "info": "String used to separate rows/items.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "sep",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "\n"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "ParserComponent"
+        },
+        "dragging": false,
+        "id": "ParserComponent-gLXY3",
+        "measured": {
+          "height": 329,
+          "width": 320
+        },
+        "position": {
+          "x": 1390.7550694134281,
+          "y": -482.1980691001524
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "ParserComponent-yieT4",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "category": "processing",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Extracts URL using a template.",
+            "display_name": "Parse URL",
+            "documentation": "https://docs.langflow.org/components-processing#parser",
+            "edited": false,
+            "field_order": [
+              "input_data",
+              "mode",
+              "pattern",
+              "sep"
+            ],
+            "frozen": false,
+            "icon": "braces",
+            "key": "ParserComponent",
+            "last_updated": "2025-11-05T22:33:38.804Z",
+            "legacy": false,
+            "lf_version": "1.6.2",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Parsed Text",
+                "group_outputs": false,
+                "method": "parse_combined_text",
+                "name": "parsed_text",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 2.220446049250313e-16,
+            "template": {
+              "_type": "Component",
+              "clean_data": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Clean Data",
+                "dynamic": false,
+                "info": "Enable to clean the data by removing empty rows and lines in each cell of the DataFrame/ Data object.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "clean_data",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom.custom_component.component import Component\nfrom langflow.helpers.data import safe_convert\nfrom langflow.inputs.inputs import BoolInput, HandleInput, MessageTextInput, MultilineInput, TabInput\nfrom langflow.schema.data import Data\nfrom langflow.schema.dataframe import DataFrame\nfrom langflow.schema.message import Message\nfrom langflow.template.field.base import Output\n\n\nclass ParserComponent(Component):\n    display_name = \"Parser\"\n    description = \"Extracts text using a template.\"\n    documentation: str = \"https://docs.langflow.org/components-processing#parser\"\n    icon = \"braces\"\n\n    inputs = [\n        HandleInput(\n            name=\"input_data\",\n            display_name=\"Data or DataFrame\",\n            input_types=[\"DataFrame\", \"Data\"],\n            info=\"Accepts either a DataFrame or a Data object.\",\n            required=True,\n        ),\n        TabInput(\n            name=\"mode\",\n            display_name=\"Mode\",\n            options=[\"Parser\", \"Stringify\"],\n            value=\"Parser\",\n            info=\"Convert into raw string instead of using a template.\",\n            real_time_refresh=True,\n        ),\n        MultilineInput(\n            name=\"pattern\",\n            display_name=\"Template\",\n            info=(\n                \"Use variables within curly brackets to extract column values for DataFrames \"\n                \"or key values for Data.\"\n                \"For example: `Name: {Name}, Age: {Age}, Country: {Country}`\"\n            ),\n            value=\"Text: {text}\",  # Example default\n            dynamic=True,\n            show=True,\n            required=True,\n        ),\n        MessageTextInput(\n            name=\"sep\",\n            display_name=\"Separator\",\n            advanced=True,\n            value=\"\\n\",\n            info=\"String used to separate rows/items.\",\n        ),\n    ]\n\n    outputs = [\n        Output(\n            display_name=\"Parsed Text\",\n            name=\"parsed_text\",\n            info=\"Formatted text output.\",\n            method=\"parse_combined_text\",\n        ),\n    ]\n\n    def update_build_config(self, build_config, field_value, field_name=None):\n        \"\"\"Dynamically hide/show `template` and enforce requirement based on `stringify`.\"\"\"\n        if field_name == \"mode\":\n            build_config[\"pattern\"][\"show\"] = self.mode == \"Parser\"\n            build_config[\"pattern\"][\"required\"] = self.mode == \"Parser\"\n            if field_value:\n                clean_data = BoolInput(\n                    name=\"clean_data\",\n                    display_name=\"Clean Data\",\n                    info=(\n                        \"Enable to clean the data by removing empty rows and lines \"\n                        \"in each cell of the DataFrame/ Data object.\"\n                    ),\n                    value=True,\n                    advanced=True,\n                    required=False,\n                )\n                build_config[\"clean_data\"] = clean_data.to_dict()\n            else:\n                build_config.pop(\"clean_data\", None)\n\n        return build_config\n\n    def _clean_args(self):\n        \"\"\"Prepare arguments based on input type.\"\"\"\n        input_data = self.input_data\n\n        match input_data:\n            case list() if all(isinstance(item, Data) for item in input_data):\n                msg = \"List of Data objects is not supported.\"\n                raise ValueError(msg)\n            case DataFrame():\n                return input_data, None\n            case Data():\n                return None, input_data\n            case dict() if \"data\" in input_data:\n                try:\n                    if \"columns\" in input_data:  # Likely a DataFrame\n                        return DataFrame.from_dict(input_data), None\n                    # Likely a Data object\n                    return None, Data(**input_data)\n                except (TypeError, ValueError, KeyError) as e:\n                    msg = f\"Invalid structured input provided: {e!s}\"\n                    raise ValueError(msg) from e\n            case _:\n                msg = f\"Unsupported input type: {type(input_data)}. Expected DataFrame or Data.\"\n                raise ValueError(msg)\n\n    def parse_combined_text(self) -> Message:\n        \"\"\"Parse all rows/items into a single text or convert input to string if `stringify` is enabled.\"\"\"\n        # Early return for stringify option\n        if self.mode == \"Stringify\":\n            return self.convert_to_string()\n\n        df, data = self._clean_args()\n\n        lines = []\n        if df is not None:\n            for _, row in df.iterrows():\n                formatted_text = self.pattern.format(**row.to_dict())\n                lines.append(formatted_text)\n        elif data is not None:\n            formatted_text = self.pattern.format(**data.data)\n            lines.append(formatted_text)\n\n        combined_text = self.sep.join(lines)\n        self.status = combined_text\n        return Message(text=combined_text)\n\n    def convert_to_string(self) -> Message:\n        \"\"\"Convert input data to string with proper error handling.\"\"\"\n        result = \"\"\n        if isinstance(self.input_data, list):\n            result = \"\\n\".join([safe_convert(item, clean_data=self.clean_data or False) for item in self.input_data])\n        else:\n            result = safe_convert(self.input_data or False)\n        self.log(f\"Converted to string with length: {len(result)}\")\n\n        message = Message(text=result)\n        self.status = message\n        return message\n"
+              },
+              "input_data": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Data or DataFrame",
+                "dynamic": false,
+                "info": "Accepts either a DataFrame or a Data object.",
+                "input_types": [
+                  "DataFrame",
+                  "Data"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "input_data",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "mode": {
+                "_input_type": "TabInput",
+                "advanced": false,
+                "display_name": "Mode",
+                "dynamic": false,
+                "info": "Convert into raw string instead of using a template.",
+                "name": "mode",
+                "options": [
+                  "Parser",
+                  "Stringify"
+                ],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "tab",
+                "value": "Parser"
+              },
+              "pattern": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Template",
+                "dynamic": true,
+                "info": "Use variables within curly brackets to extract column values for DataFrames or key values for Data.For example: `Name: {Name}, Age: {Age}, Country: {Country}`",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "pattern",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "{url}"
+              },
+              "sep": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Separator",
+                "dynamic": false,
+                "info": "String used to separate rows/items.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "sep",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "\n"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "ParserComponent"
+        },
+        "dragging": false,
+        "id": "ParserComponent-yieT4",
+        "measured": {
+          "height": 329,
+          "width": 320
+        },
+        "position": {
+          "x": 1399.7970032452747,
+          "y": 231.8778242716982
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "LanguageModelComponent-grVfv",
+          "node": {
+            "base_classes": [
+              "LanguageModel",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Runs a language model given a specified provider.",
+            "display_name": "LLM -> Scorer",
+            "documentation": "https://docs.langflow.org/components-models",
+            "edited": false,
+            "field_order": [
+              "provider",
+              "model_name",
+              "api_key",
+              "input_value",
+              "system_message",
+              "stream",
+              "temperature"
+            ],
+            "frozen": false,
+            "icon": "brain-circuit",
+            "last_updated": "2025-11-08T12:21:05.712Z",
+            "legacy": false,
+            "lf_version": "1.6.2",
+            "metadata": {
+              "keywords": [
+                "model",
+                "llm",
+                "language model",
+                "large language model"
+              ]
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Model Response",
+                "group_outputs": false,
+                "method": "text_response",
+                "name": "text_output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Language Model",
+                "group_outputs": false,
+                "method": "build_model",
+                "name": "model_output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "LanguageModel",
+                "tool_mode": true,
+                "types": [
+                  "LanguageModel"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "priority": 0,
+            "template": {
+              "_type": "Component",
+              "api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "OpenAI API Key",
+                "dynamic": false,
+                "info": "Model Provider API key",
+                "input_types": [],
+                "load_from_db": true,
+                "name": "api_key",
+                "password": true,
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from typing import Any\n\nfrom langchain_anthropic import ChatAnthropic\nfrom langchain_google_genai import ChatGoogleGenerativeAI\nfrom langchain_openai import ChatOpenAI\n\nfrom langflow.base.models.anthropic_constants import ANTHROPIC_MODELS\nfrom langflow.base.models.google_generative_ai_constants import GOOGLE_GENERATIVE_AI_MODELS\nfrom langflow.base.models.model import LCModelComponent\nfrom langflow.base.models.openai_constants import OPENAI_CHAT_MODEL_NAMES, OPENAI_REASONING_MODEL_NAMES\nfrom langflow.field_typing import LanguageModel\nfrom langflow.field_typing.range_spec import RangeSpec\nfrom langflow.inputs.inputs import BoolInput\nfrom langflow.io import DropdownInput, MessageInput, MultilineInput, SecretStrInput, SliderInput\nfrom langflow.schema.dotdict import dotdict\n\n\nclass LanguageModelComponent(LCModelComponent):\n    display_name = \"Language Model\"\n    description = \"Runs a language model given a specified provider.\"\n    documentation: str = \"https://docs.langflow.org/components-models\"\n    icon = \"brain-circuit\"\n    category = \"models\"\n    priority = 0  # Set priority to 0 to make it appear first\n\n    inputs = [\n        DropdownInput(\n            name=\"provider\",\n            display_name=\"Model Provider\",\n            options=[\"OpenAI\", \"Anthropic\", \"Google\"],\n            value=\"OpenAI\",\n            info=\"Select the model provider\",\n            real_time_refresh=True,\n            options_metadata=[{\"icon\": \"OpenAI\"}, {\"icon\": \"Anthropic\"}, {\"icon\": \"GoogleGenerativeAI\"}],\n        ),\n        DropdownInput(\n            name=\"model_name\",\n            display_name=\"Model Name\",\n            options=OPENAI_CHAT_MODEL_NAMES + OPENAI_REASONING_MODEL_NAMES,\n            value=OPENAI_CHAT_MODEL_NAMES[0],\n            info=\"Select the model to use\",\n            real_time_refresh=True,\n        ),\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"OpenAI API Key\",\n            info=\"Model Provider API key\",\n            required=False,\n            show=True,\n            real_time_refresh=True,\n        ),\n        MessageInput(\n            name=\"input_value\",\n            display_name=\"Input\",\n            info=\"The input text to send to the model\",\n        ),\n        MultilineInput(\n            name=\"system_message\",\n            display_name=\"System Message\",\n            info=\"A system message that helps set the behavior of the assistant\",\n            advanced=False,\n        ),\n        BoolInput(\n            name=\"stream\",\n            display_name=\"Stream\",\n            info=\"Whether to stream the response\",\n            value=False,\n            advanced=True,\n        ),\n        SliderInput(\n            name=\"temperature\",\n            display_name=\"Temperature\",\n            value=0.1,\n            info=\"Controls randomness in responses\",\n            range_spec=RangeSpec(min=0, max=1, step=0.01),\n            advanced=True,\n        ),\n    ]\n\n    def build_model(self) -> LanguageModel:\n        provider = self.provider\n        model_name = self.model_name\n        temperature = self.temperature\n        stream = self.stream\n\n        if provider == \"OpenAI\":\n            if not self.api_key:\n                msg = \"OpenAI API key is required when using OpenAI provider\"\n                raise ValueError(msg)\n\n            if model_name in OPENAI_REASONING_MODEL_NAMES:\n                # reasoning models do not support temperature (yet)\n                temperature = None\n\n            return ChatOpenAI(\n                model_name=model_name,\n                temperature=temperature,\n                streaming=stream,\n                openai_api_key=self.api_key,\n            )\n        if provider == \"Anthropic\":\n            if not self.api_key:\n                msg = \"Anthropic API key is required when using Anthropic provider\"\n                raise ValueError(msg)\n            return ChatAnthropic(\n                model=model_name,\n                temperature=temperature,\n                streaming=stream,\n                anthropic_api_key=self.api_key,\n            )\n        if provider == \"Google\":\n            if not self.api_key:\n                msg = \"Google API key is required when using Google provider\"\n                raise ValueError(msg)\n            return ChatGoogleGenerativeAI(\n                model=model_name,\n                temperature=temperature,\n                streaming=stream,\n                google_api_key=self.api_key,\n            )\n        msg = f\"Unknown provider: {provider}\"\n        raise ValueError(msg)\n\n    def update_build_config(self, build_config: dotdict, field_value: Any, field_name: str | None = None) -> dotdict:\n        if field_name == \"provider\":\n            if field_value == \"OpenAI\":\n                build_config[\"model_name\"][\"options\"] = OPENAI_CHAT_MODEL_NAMES + OPENAI_REASONING_MODEL_NAMES\n                build_config[\"model_name\"][\"value\"] = OPENAI_CHAT_MODEL_NAMES[0]\n                build_config[\"api_key\"][\"display_name\"] = \"OpenAI API Key\"\n            elif field_value == \"Anthropic\":\n                build_config[\"model_name\"][\"options\"] = ANTHROPIC_MODELS\n                build_config[\"model_name\"][\"value\"] = ANTHROPIC_MODELS[0]\n                build_config[\"api_key\"][\"display_name\"] = \"Anthropic API Key\"\n            elif field_value == \"Google\":\n                build_config[\"model_name\"][\"options\"] = GOOGLE_GENERATIVE_AI_MODELS\n                build_config[\"model_name\"][\"value\"] = GOOGLE_GENERATIVE_AI_MODELS[0]\n                build_config[\"api_key\"][\"display_name\"] = \"Google API Key\"\n        elif field_name == \"model_name\" and field_value.startswith(\"o1\") and self.provider == \"OpenAI\":\n            # Hide system_message for o1 models - currently unsupported\n            if \"system_message\" in build_config:\n                build_config[\"system_message\"][\"show\"] = False\n        elif field_name == \"model_name\" and not field_value.startswith(\"o1\") and \"system_message\" in build_config:\n            build_config[\"system_message\"][\"show\"] = True\n        return build_config\n"
+              },
+              "input_value": {
+                "_input_type": "MessageInput",
+                "advanced": false,
+                "display_name": "Input",
+                "dynamic": false,
+                "info": "The input text to send to the model",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "model_name": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Model Name",
+                "dynamic": false,
+                "external_options": {},
+                "info": "Select the model to use",
+                "name": "model_name",
+                "options": [
+                  "gpt-4o-mini",
+                  "gpt-4o",
+                  "gpt-4.1",
+                  "gpt-4.1-mini",
+                  "gpt-4.1-nano",
+                  "gpt-4-turbo",
+                  "gpt-4-turbo-preview",
+                  "gpt-4",
+                  "gpt-3.5-turbo",
+                  "gpt-5",
+                  "gpt-5-mini",
+                  "gpt-5-nano",
+                  "gpt-5-chat-latest",
+                  "o1",
+                  "o3-mini",
+                  "o3",
+                  "o3-pro",
+                  "o4-mini",
+                  "o4-mini-high"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "gpt-4.1-nano"
+              },
+              "provider": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Model Provider",
+                "dynamic": false,
+                "external_options": {},
+                "info": "Select the model provider",
+                "name": "provider",
+                "options": [
+                  "OpenAI",
+                  "Anthropic",
+                  "Google"
+                ],
+                "options_metadata": [
+                  {
+                    "icon": "OpenAI"
+                  },
+                  {
+                    "icon": "Anthropic"
+                  },
+                  {
+                    "icon": "GoogleGenerativeAI"
+                  }
+                ],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "OpenAI"
+              },
+              "stream": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Stream",
+                "dynamic": false,
+                "info": "Whether to stream the response",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "stream",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "system_message": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "System Message",
+                "dynamic": false,
+                "info": "A system message that helps set the behavior of the assistant",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "system_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "You are a helpful apartment rental advisor for the Swiss market. Your job is to analyze apartment listings and help users determine if they're a good match for their needs.\n\n## Your Approach:\n- Be friendly, conversational, and encouraging\n- Extract all relevant details accurately from listings\n- Compare listings objectively against the user's specific criteria\n- Only evaluate criteria the user explicitly mentioned - don't penalize for unspecified requirements\n- Be realistic about \"close enough\" matches (e.g., 95m² ≈ 100m², Zürich City ≈ 8008 Zürich)\n- Distinguish between deal-breakers and nice-to-haves\n- Provide honest, actionable recommendations\n\n## Swiss Rental Context:\n- Understand Swiss room counting (e.g., 3.5 rooms = 2 bedrooms + living room + half room)\n- Know typical Zürich pricing and neighborhoods\n- Recognize common Swiss rental terms and amenities\n- Consider public transport accessibility and local area quality\n\n## Tone:\n- Professional yet warm\n- Clear and direct\n- Helpful and supportive\n- Honest about both positives and concerns\n\nFollow the exact output format provided in the user's request."
+              },
+              "temperature": {
+                "_input_type": "SliderInput",
+                "advanced": true,
+                "display_name": "Temperature",
+                "dynamic": false,
+                "info": "Controls randomness in responses",
+                "max_label": "",
+                "max_label_icon": "",
+                "min_label": "",
+                "min_label_icon": "",
+                "name": "temperature",
+                "placeholder": "",
+                "range_spec": {
+                  "max": 1,
+                  "min": 0,
+                  "step": 0.01,
+                  "step_type": "float"
+                },
+                "required": false,
+                "show": true,
+                "slider_buttons": false,
+                "slider_buttons_options": [],
+                "slider_input": false,
+                "title_case": false,
+                "tool_mode": false,
+                "type": "slider",
+                "value": 0.1
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "text_output",
+          "showNode": true,
+          "type": "LanguageModelComponent"
+        },
+        "dragging": false,
+        "id": "LanguageModelComponent-grVfv",
+        "measured": {
+          "height": 534,
+          "width": 320
+        },
+        "position": {
+          "x": 2622.0650112914627,
+          "y": -706.287044662656
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "PythonREPLComponent-M6s97",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Format Firecrawl single URL output for LLM extraction",
+            "display_name": "Format Listing Input",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "scraped_data"
+            ],
+            "frozen": false,
+            "icon": "file-text",
+            "legacy": false,
+            "lf_version": "1.6.2",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Formatted Text",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "format_data",
+                "name": "formatted_text",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom.custom_component.component import Component\nfrom langflow.io import DataInput, Output\nfrom langflow.schema.data import Data\nfrom langflow.schema.message import Message\n\n\nclass FormatListingInput(Component):\n    display_name = \"Format Listing Input\"\n    description = \"Format Firecrawl single URL output for LLM extraction\"\n    icon = \"file-text\"\n\n    inputs = [\n        DataInput(\n            name=\"scraped_data\",\n            display_name=\"Scraped Data\",\n            info=\"Data from Firecrawl scraper with content and url\",\n            required=True,\n        ),\n    ]\n\n    outputs = [\n        Output(\n            display_name=\"Formatted Text\",\n            name=\"formatted_text\",\n            method=\"format_data\",\n        ),\n    ]\n\n    def format_data(self) -> Message:\n        \"\"\"Format single apartment listing for LLM extraction\"\"\"\n        raw_data = self.scraped_data\n        \n        self.log(f\"Received data type: {type(raw_data)}\")\n        \n        # Extract data from the Data object\n        if isinstance(raw_data, Data):\n            data_dict = raw_data.data if hasattr(raw_data, 'data') else {}\n        elif isinstance(raw_data, dict):\n            data_dict = raw_data\n        else:\n            self.log(f\"Unexpected data format: {type(raw_data)}\")\n            return Message(text=\"Error: Unexpected data format\")\n        \n        # Extract fields\n        content = data_dict.get(\"content\", \"\")\n        url = data_dict.get(\"url\", \"\")\n        title = data_dict.get(\"title\", \"\")\n        description = data_dict.get(\"description\", \"\")\n        metadata = data_dict.get(\"metadata\", {})\n        \n        # Extract image URL from metadata\n        image_url = metadata.get(\"ogImage\", \"\") if isinstance(metadata, dict) else \"\"\n        \n        self.log(f\"Image URL extracted: {image_url}\")\n        \n        # Check for errors\n        if data_dict.get(\"error\"):\n            error_msg = data_dict.get(\"error\")\n            self.log(f\"Error in scraped data: {error_msg}\")\n            return Message(text=f\"Error scraping listing: {error_msg}\")\n        \n        if not content:\n            self.log(\"No content found in scraped data\")\n            return Message(text=\"Error: No content found in the scraped listing\")\n        \n        # Format for LLM - include image URL in special marker\n        formatted_text = f\"\"\"# Apartment Listing Details\n\n**URL:** {url}\n**Title:** {title}\n**LISTING_IMAGE_URL:** {image_url}\n\n---\n\n## Listing Content:\n\n{content}\n\n---\n\n## Additional Information:\n- **Description:** {description}\n- **Source URL:** {url}\n- **Cover Image:** {image_url}\n\n---\n\n## Instructions:\nExtract the following apartment information from the listing above:\n- Location (city, postal code, address)\n- Number of rooms\n- Living space (square meters)\n- Rent price (CHF)\n- Any additional features or amenities mentioned\n- Available date\n- Contact information (if available)\n\nReturn the extracted information as structured JSON.\"\"\"\n        \n        self.log(f\"Successfully formatted listing from {url}\")\n        return Message(text=formatted_text)\n\n    def build(self):\n        return self.format_data()\n"
+              },
+              "scraped_data": {
+                "_input_type": "DataInput",
+                "advanced": false,
+                "display_name": "Scraped Data",
+                "dynamic": false,
+                "info": "Data from Firecrawl scraper with content and url",
+                "input_types": [
+                  "Data"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "scraped_data",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "FormatListingInput"
+        },
+        "dragging": false,
+        "id": "PythonREPLComponent-M6s97",
+        "measured": {
+          "height": 182,
+          "width": 320
+        },
+        "position": {
+          "x": 1851.3701656771873,
+          "y": 548.4666800196987
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "Prompt Template-FCrln",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Combines user criteria, listing data, and image analysis for LLM matching/scoring",
+            "display_name": "Apartment Matching Prompt",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "user_criteria",
+              "listing_data",
+              "image_analysis"
+            ],
+            "frozen": false,
+            "icon": "align-left",
+            "legacy": false,
+            "lf_version": "1.6.2",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Prompt",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "build_prompt",
+                "name": "prompt",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom.custom_component.component import Component\nfrom langflow.io import MessageTextInput, Output\nfrom langflow.schema.message import Message\n\n\nclass ApartmentMatchingPrompt(Component):\n    display_name = \"Apartment Matching Prompt\"\n    description = \"Combines user criteria, listing data, and image analysis for LLM matching/scoring\"\n    icon = \"align-left\"\n\n    inputs = [\n        MessageTextInput(\n            name=\"user_criteria\",\n            display_name=\"User Criteria (JSON)\",\n            info=\"JSON string of user's apartment criteria from criteria extractor\",\n            required=True,\n        ),\n        MessageTextInput(\n            name=\"listing_data\",\n            display_name=\"Listing Data\",\n            info=\"Formatted listing content from listing formatter\",\n            required=True,\n        ),\n        MessageTextInput(\n            name=\"image_analysis\",\n            display_name=\"Image Analysis (Optional)\",\n            info=\"Image analysis summary from Image Analyzer component\",\n            required=False,\n        ),\n    ]\n\n    outputs = [\n        Output(\n            display_name=\"Prompt\",\n            name=\"prompt\",\n            method=\"build_prompt\",\n        ),\n    ]\n\n    def build_prompt(self) -> Message:\n        \"\"\"Build the matching prompt with criteria, listing, and image analysis\"\"\"\n        \n        # Check if image analysis is provided\n        has_image_analysis = bool(self.image_analysis and str(self.image_analysis).strip())\n        \n        prompt_template = \"\"\"User's criteria:\n```json\n{user_criteria}\n```\n\nListing data:\n<listing>\n{listing_data}\n</listing>\n\n{image_analysis_section}\n\n---\n\n## Your Task:\n\nAnalyze this apartment listing and create a beautiful, user-friendly match report{with_images}.\n\n**CRITICAL IMAGE INSTRUCTION:** \nThe listing data contains a **LISTING_IMAGE_URL:** field. You MUST extract the COMPLETE URL (do not truncate it) and insert it at the very top of your response using this EXACT format:\n![Apartment](COMPLETE_URL_HERE)\n\nMake sure to copy the entire URL exactly as provided, including all characters after the last slash.\n\n### Output Format (use emojis and clear formatting):\n\n```\n# 🏠 Apartment Match Analysis\n\n![Apartment](INSERT_COMPLETE_LISTING_IMAGE_URL_HERE)\n\n## 📋 Listing Summary\n**Title:** [listing title]\n**Location:** [full address/area]\n**Price:** CHF [amount]/month\n**Rooms:** [number] rooms\n**Living Space:** [size] m²\n**Available:** [date or immediately]\n\n---\n\n## 🎯 Match Score: [X]% \n\n[One sentence overall assessment]\n\n---\n\n## ✅ What Matches Your Criteria\n\n[For EACH criterion that matches, use this format:]\n**✓ [Criterion Name]**\n• Your requirement: [what user asked for]\n• Listing offers: [what listing has]\n• Assessment: [brief positive note]\n\n---\n\n## ⚠️ Points to Consider\n\n[For EACH criterion that doesn't match or is unclear:]\n**⚠ [Criterion Name]**\n• Your requirement: [what user asked for]\n• Listing offers: [what listing has]\n• Impact: [why this matters - deal-breaker or negotiable?]\n\n[If no concerns: *No significant concerns - all criteria met!*]\n\n---\n\n## 💡 Key Highlights\n\n• [Standout feature 1]\n• [Standout feature 2]\n• [Standout feature 3]\n• [Other notable amenities]\n\n---\n\n{image_gallery_section}\n\n---\n\n## 🤔 Our Recommendation\n\n**[HIGHLY RECOMMENDED / WORTH CONSIDERING / NOT A GOOD FIT]**\n\n[2-3 sentences explaining why, considering the user's priorities and the listing's strengths/weaknesses. Be honest and helpful.]\n\n---\n\n## 📌 Next Steps\n\n[If recommended: Suggest they contact the landlord, schedule viewing, etc.]\n[If not recommended: Suggest what to look for instead]\n\n---\n\n[ONLY IF HIGHLY RECOMMENDED OR WORTH CONSIDERING:]\n\n## ✉️ Personalized Contact Message\n\nReady to send! Copy this message for the \"Contact Advertiser\" form on Homegate.ch:\n\n---\n**Subject:** Interest in [Room count]-Room Apartment at [Location]\n\nDear Sir/Madam,\n\nI am writing to express my strong interest in the [room count]-room apartment at [address/location] listed for CHF [price]/month.\n\n[Include 2-3 sentences about why this apartment is perfect for them based on their criteria - be specific! Reference actual matches like \"The 105m² living space and location in 8008 Zürich are exactly what I've been searching for.\"]\n\nAbout me:\n• [Infer likely tenant profile based on their search - e.g., \"Professional working in Zürich\" or \"Small family\" based on room requirements]\n• Reliable, non-smoking tenant with excellent references\n• Available to move in [reference availability date from listing or say \"immediately\"]\n• Long-term rental desired\n\nI am very interested in scheduling a viewing at your earliest convenience. I am flexible with timing and can meet this week if possible.\n\nI have prepared all necessary documents (employment contract, salary statements, references) and am ready to proceed quickly given the competitive Zürich rental market.\n\nLooking forward to hearing from you.\n\nBest regards,\n[Your Name]\n[Your Phone]\n[Your Email]\n---\n\n**Tip:** Personalize further by adding:\n- Your current situation (relocating, growing family, etc.)\n- Why you chose this specific listing\n- Your move-in timeline\n- Any relevant lifestyle details (quiet, respectful neighbor, etc.)\n\nGood apartments in Zürich get many applications - send this today! ⚡\n```\n\n### Important Instructions:\n1. **Be conversational and friendly** - write like you're helping a friend\n2. **Use emojis** to make it visually appealing and scannable\n3. **Be honest** - if something doesn't match, say so clearly\n4. **Prioritize** - focus on what matters most (deal-breakers vs nice-to-haves)\n5. **Only compare specified criteria** - don't penalize for unspecified requirements\n6. **Extract all listing details** - even if not in criteria (they're useful to see)\n7. **Be realistic** - 95m² is close enough to 100m², Zürich City ≈ 8008 Zürich\n8. **Consider Swiss context** - room counting, pricing norms, etc.\n9. **Make it actionable** - give clear next steps\n10. **Generate contact message ONLY for recommended listings** - skip this section if \"NOT A GOOD FIT\"\n11. **Personalize the contact message** based on the user's actual criteria matches (be specific about what matched!)\n12. **Make the contact message professional yet warm** - increase their chances in competitive market\n\nReturn ONLY the formatted match analysis, ready to display to the user.\"\"\"\n\n        # Build image analysis section if available\n        if has_image_analysis:\n            image_analysis_section = f\"\"\"\nImage Analysis:\n<image_analysis>\n{self.image_analysis}\n</image_analysis>\n\"\"\"\n            with_images = \" with detailed image analysis\"\n            \n            image_gallery_section = \"\"\"## 📸 Photo Gallery & Analysis\n\n**IMPORTANT:** Extract all image URLs from the Image Analysis section and create a beautiful photo gallery here.\n\nFor each analyzed image:\n1. Display the image using: ![Room Name](image_url)\n2. Below each image, include a brief summary of the analysis\n3. Organize by room type (Living Areas, Bedrooms, Bathrooms, Outdoor Spaces, Views)\n\nExample format:\n### Living Areas\n![Living Room](https://media2.homegate.ch/.../image1.jpg)\n**Analysis:** Spacious modern living room with floor-to-ceiling windows, contemporary furnishings, and access to terrace. Score: 8/10\n\n![Kitchen](https://media2.homegate.ch/.../image2.jpg)\n**Analysis:** Fully equipped modern kitchen with high-end appliances and ample counter space. Score: 9/10\n\n### Outdoor Spaces\n![Terrace](https://media2.homegate.ch/.../image3.jpg)\n**Analysis:** Large terrace with mountain views, outdoor furniture, and infrared sauna. Premium amenity. Score: 10/10\n\nMake the gallery visually appealing and organized. Only include images that were actually analyzed.\"\"\"\n        else:\n            image_analysis_section = \"\"\n            with_images = \"\"\n            image_gallery_section = \"\"\n\n        formatted_prompt = prompt_template.format(\n            user_criteria=self.user_criteria,\n            listing_data=self.listing_data,\n            image_analysis_section=image_analysis_section,\n            with_images=with_images,\n            image_gallery_section=image_gallery_section\n        )\n        \n        self.log(f\"Built apartment matching prompt (images: {has_image_analysis})\")\n        return Message(text=formatted_prompt)\n\n    def build(self):\n        return self.build_prompt()\n"
+              },
+              "image_analysis": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Image Analysis (Optional)",
+                "dynamic": false,
+                "info": "Image analysis summary from Image Analyzer component",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "image_analysis",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "listing_data": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Listing Data",
+                "dynamic": false,
+                "info": "Formatted listing content from listing formatter",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "listing_data",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "user_criteria": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "User Criteria (JSON)",
+                "dynamic": false,
+                "info": "JSON string of user's apartment criteria from criteria extractor",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "user_criteria",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "ApartmentMatchingPrompt"
+        },
+        "dragging": false,
+        "id": "Prompt Template-FCrln",
+        "measured": {
+          "height": 385,
+          "width": 320
+        },
+        "position": {
+          "x": 2622.223853807757,
+          "y": -169.69585615465118
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "ChatOutput-73spi",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "category": "input_output",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Display a chat message in the Playground.",
+            "display_name": "Chat Output",
+            "documentation": "https://docs.langflow.org/components-io#chat-output",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "should_store_message",
+              "sender",
+              "sender_name",
+              "session_id",
+              "data_template"
+            ],
+            "frozen": false,
+            "icon": "MessagesSquare",
+            "key": "ChatOutput",
+            "legacy": false,
+            "lf_version": "1.6.2",
+            "metadata": {},
+            "minimized": true,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Output Message",
+                "group_outputs": false,
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 0.007216440637271487,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from collections.abc import Generator\nfrom typing import Any\n\nimport orjson\nfrom fastapi.encoders import jsonable_encoder\n\nfrom langflow.base.io.chat import ChatComponent\nfrom langflow.helpers.data import safe_convert\nfrom langflow.inputs.inputs import BoolInput, DropdownInput, HandleInput, MessageTextInput\nfrom langflow.schema.data import Data\nfrom langflow.schema.dataframe import DataFrame\nfrom langflow.schema.message import Message\nfrom langflow.schema.properties import Source\nfrom langflow.template.field.base import Output\nfrom langflow.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_AI,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatOutput(ChatComponent):\n    display_name = \"Chat Output\"\n    description = \"Display a chat message in the Playground.\"\n    documentation: str = \"https://docs.langflow.org/components-io#chat-output\"\n    icon = \"MessagesSquare\"\n    name = \"ChatOutput\"\n    minimized = True\n\n    inputs = [\n        HandleInput(\n            name=\"input_value\",\n            display_name=\"Inputs\",\n            info=\"Message to be passed as output.\",\n            input_types=[\"Data\", \"DataFrame\", \"Message\"],\n            required=True,\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_AI,\n            advanced=True,\n            info=\"Type of sender.\",\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_AI,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"data_template\",\n            display_name=\"Data Template\",\n            value=\"{text}\",\n            advanced=True,\n            info=\"Template to convert Data to Text. If left empty, it will be dynamically set to the Data's text key.\",\n        ),\n    ]\n    outputs = [\n        Output(\n            display_name=\"Output Message\",\n            name=\"message\",\n            method=\"message_response\",\n        ),\n    ]\n\n    def _build_source(self, id_: str | None, display_name: str | None, source: str | None) -> Source:\n        source_dict = {}\n        if id_:\n            source_dict[\"id\"] = id_\n        if display_name:\n            source_dict[\"display_name\"] = display_name\n        if source:\n            # Handle case where source is a ChatOpenAI object\n            if hasattr(source, \"model_name\"):\n                source_dict[\"source\"] = source.model_name\n            elif hasattr(source, \"model\"):\n                source_dict[\"source\"] = str(source.model)\n            else:\n                source_dict[\"source\"] = str(source)\n        return Source(**source_dict)\n\n    async def message_response(self) -> Message:\n        # First convert the input to string if needed\n        text = self.convert_to_string()\n\n        # Get source properties\n        source, _icon, display_name, source_id = self.get_properties_from_source_component()\n\n        # Create or use existing Message object\n        if isinstance(self.input_value, Message):\n            message = self.input_value\n            # Update message properties\n            message.text = text\n        else:\n            message = Message(text=text)\n\n        # Set message properties\n        message.sender = self.sender\n        message.sender_name = self.sender_name\n        message.session_id = self.session_id\n        message.flow_id = self.graph.flow_id if hasattr(self, \"graph\") else None\n        message.properties.source = self._build_source(source_id, display_name, source)\n\n        # Store message if needed\n        if self.session_id and self.should_store_message:\n            stored_message = await self.send_message(message)\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n\n    def _serialize_data(self, data: Data) -> str:\n        \"\"\"Serialize Data object to JSON string.\"\"\"\n        # Convert data.data to JSON-serializable format\n        serializable_data = jsonable_encoder(data.data)\n        # Serialize with orjson, enabling pretty printing with indentation\n        json_bytes = orjson.dumps(serializable_data, option=orjson.OPT_INDENT_2)\n        # Convert bytes to string and wrap in Markdown code blocks\n        return \"```json\\n\" + json_bytes.decode(\"utf-8\") + \"\\n```\"\n\n    def _validate_input(self) -> None:\n        \"\"\"Validate the input data and raise ValueError if invalid.\"\"\"\n        if self.input_value is None:\n            msg = \"Input data cannot be None\"\n            raise ValueError(msg)\n        if isinstance(self.input_value, list) and not all(\n            isinstance(item, Message | Data | DataFrame | str) for item in self.input_value\n        ):\n            invalid_types = [\n                type(item).__name__\n                for item in self.input_value\n                if not isinstance(item, Message | Data | DataFrame | str)\n            ]\n            msg = f\"Expected Data or DataFrame or Message or str, got {invalid_types}\"\n            raise TypeError(msg)\n        if not isinstance(\n            self.input_value,\n            Message | Data | DataFrame | str | list | Generator | type(None),\n        ):\n            type_name = type(self.input_value).__name__\n            msg = f\"Expected Data or DataFrame or Message or str, Generator or None, got {type_name}\"\n            raise TypeError(msg)\n\n    def convert_to_string(self) -> str | Generator[Any, None, None]:\n        \"\"\"Convert input data to string with proper error handling.\"\"\"\n        self._validate_input()\n        if isinstance(self.input_value, list):\n            clean_data: bool = getattr(self, \"clean_data\", False)\n            return \"\\n\".join([safe_convert(item, clean_data=clean_data) for item in self.input_value])\n        if isinstance(self.input_value, Generator):\n            return self.input_value\n        return safe_convert(self.input_value)\n"
+              },
+              "data_template": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Data Template",
+                "dynamic": false,
+                "info": "Template to convert Data to Text. If left empty, it will be dynamically set to the Data's text key.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "data_template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "{text}"
+              },
+              "input_value": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Inputs",
+                "dynamic": false,
+                "info": "Message to be passed as output.",
+                "input_types": [
+                  "Data",
+                  "DataFrame",
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "input_value",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "sender": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Sender Type",
+                "dynamic": false,
+                "external_options": {},
+                "info": "Type of sender.",
+                "name": "sender",
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "Machine"
+              },
+              "sender_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Sender Name",
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "sender_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "AI"
+              },
+              "session_id": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Session ID",
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "session_id",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "should_store_message": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Store Messages",
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "should_store_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": false,
+          "type": "ChatOutput"
+        },
+        "dragging": false,
+        "id": "ChatOutput-73spi",
+        "measured": {
+          "height": 48,
+          "width": 192
+        },
+        "position": {
+          "x": 3030.4268670951474,
+          "y": -221.51421762343205
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "FirecrawlScrapeApi-U6Xaz",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Firecrawl API for scraping a single URL (apartment listing)",
+            "display_name": "Firecrawl Scrape Single URL",
+            "documentation": "https://docs.firecrawl.dev",
+            "edited": true,
+            "field_order": [
+              "firecrawl_api_key",
+              "url",
+              "timeout",
+              "extractor_options",
+              "scrape_options"
+            ],
+            "frozen": false,
+            "icon": "globe",
+            "legacy": false,
+            "lf_version": "1.6.2",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Scraped Data",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "scrape_url",
+                "name": "data",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom.custom_component.component import Component\nfrom langflow.io import (\n    DictInput,\n    IntInput,\n    MessageTextInput,\n    Output,\n    SecretStrInput,\n)\nfrom langflow.schema.data import Data\n\nimport requests\n\n\nclass FirecrawlSingleURLScraper(Component):\n    display_name: str = \"Firecrawl Scrape Single URL\"\n    description: str = \"Firecrawl API for scraping a single URL (apartment listing)\"\n    output_types: list[str] = [\"Data\"]\n    documentation: str = \"https://docs.firecrawl.dev\"\n    icon = \"globe\"\n\n    inputs = [\n        SecretStrInput(\n            name=\"firecrawl_api_key\",\n            display_name=\"Firecrawl API Key\",\n            required=True,\n            password=True,\n            info=\"The Firecrawl API Key from firecrawl.dev\",\n        ),\n        MessageTextInput(\n            name=\"url\",\n            display_name=\"URL\",\n            required=True,\n            info=\"URL string from Parse URL node output\",\n        ),\n        IntInput(\n            name=\"timeout\",\n            display_name=\"Timeout\",\n            value=30,\n            info=\"Timeout for the request in seconds.\",\n            advanced=True,\n        ),\n        DictInput(\n            name=\"extractor_options\",\n            display_name=\"Extractor Options\",\n            info=\"Additional extractor options to pass to the API.\",\n            advanced=True,\n        ),\n        DictInput(\n            name=\"scrape_options\",\n            display_name=\"Scrape Options\",\n            info=\"Additional scrape options to pass to the API.\",\n            advanced=True,\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Scraped Data\", name=\"data\", method=\"scrape_url\"),\n    ]\n\n    def scrape_url(self) -> Data:\n        \"\"\"Scrape a single URL using Firecrawl API\"\"\"\n        \n        # Get URL string directly\n        url = str(self.url).strip()\n        \n        if not url:\n            raise ValueError(\"No URL provided. Please connect a URL string from the Parse URL node.\")\n        \n        # Clean the URL\n        url = url.strip(\"'\\\"[]\")\n        \n        self.log(f\"Scraping URL: {url}\")\n\n        # Prepare API endpoint\n        api_url = \"https://api.firecrawl.dev/v1/scrape\"\n        headers = {\n            \"Authorization\": f\"Bearer {self.firecrawl_api_key}\",\n            \"Content-Type\": \"application/json\"\n        }\n\n        try:\n            # Build request payload\n            payload = {\n                \"url\": url,\n                \"formats\": [\"markdown\", \"html\"]\n            }\n            \n            # Add optional parameters\n            if self.extractor_options:\n                payload[\"extractorOptions\"] = self.extractor_options\n            \n            if self.scrape_options:\n                payload.update(self.scrape_options)\n            \n            # Make API request\n            response = requests.post(\n                api_url,\n                json=payload,\n                headers=headers,\n                timeout=self.timeout or 30\n            )\n            \n            response.raise_for_status()\n            result = response.json()\n            \n            # Extract data from response\n            if result.get(\"success\"):\n                data = result.get(\"data\", {})\n                \n                scraped_data = Data(data={\n                    \"content\": data.get(\"markdown\", data.get(\"html\", \"\")),\n                    \"url\": url,\n                    \"metadata\": data.get(\"metadata\", {}),\n                    \"title\": data.get(\"metadata\", {}).get(\"title\", \"\"),\n                    \"description\": data.get(\"metadata\", {}).get(\"description\", \"\"),\n                })\n                \n                self.log(f\"Successfully scraped: {url}\")\n                return scraped_data\n            else:\n                error_msg = result.get(\"error\", \"Unknown error\")\n                self.log(f\"Firecrawl API error: {error_msg}\")\n                return Data(data={\n                    \"content\": \"\",\n                    \"url\": url,\n                    \"error\": error_msg\n                })\n        \n        except requests.exceptions.Timeout:\n            error_msg = f\"Request timeout after {self.timeout} seconds\"\n            self.log(error_msg)\n            return Data(data={\n                \"content\": \"\",\n                \"url\": url,\n                \"error\": error_msg\n            })\n        \n        except requests.exceptions.RequestException as e:\n            error_msg = f\"Request error: {str(e)}\"\n            self.log(error_msg)\n            return Data(data={\n                \"content\": \"\",\n                \"url\": url,\n                \"error\": error_msg\n            })\n        \n        except Exception as e:\n            error_msg = f\"Unexpected error: {str(e)}\"\n            self.log(error_msg)\n            return Data(data={\n                \"content\": \"\",\n                \"url\": url,\n                \"error\": error_msg\n            })\n\n    def build(self):\n        return self.scrape_url()\n\n\nclass FirecrawlToolError(Exception):\n    \"\"\"FirecrawlTool error.\"\"\"\n"
+              },
+              "extractor_options": {
+                "_input_type": "DictInput",
+                "advanced": true,
+                "display_name": "Extractor Options",
+                "dynamic": false,
+                "info": "Additional extractor options to pass to the API.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "extractor_options",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "dict",
+                "value": {}
+              },
+              "firecrawl_api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "Firecrawl API Key",
+                "dynamic": false,
+                "info": "The Firecrawl API Key from firecrawl.dev",
+                "input_types": [],
+                "load_from_db": true,
+                "name": "firecrawl_api_key",
+                "password": true,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "scrape_options": {
+                "_input_type": "DictInput",
+                "advanced": true,
+                "display_name": "Scrape Options",
+                "dynamic": false,
+                "info": "Additional scrape options to pass to the API.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "scrape_options",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "dict",
+                "value": {}
+              },
+              "timeout": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Timeout",
+                "dynamic": false,
+                "info": "Timeout for the request in seconds.",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "timeout",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "url": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "URL",
+                "dynamic": false,
+                "info": "URL string from Parse URL node output",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "url",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "FirecrawlSingleURLScraper"
+        },
+        "dragging": false,
+        "id": "FirecrawlScrapeApi-U6Xaz",
+        "measured": {
+          "height": 302,
+          "width": 320
+        },
+        "position": {
+          "x": 1852.332836641606,
+          "y": 246.02857398204492
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "PythonREPLComponent-dWQ1m",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Analyzes apartment listing images using vision AI in parallel",
+            "display_name": "Apartment Image Analyzer",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "listing_content",
+              "openai_api_key",
+              "model",
+              "max_images"
+            ],
+            "frozen": false,
+            "icon": "image",
+            "legacy": false,
+            "lf_version": "1.6.2",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Analysis Summary",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "analyze_images",
+                "name": "analysis",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import re\nimport asyncio\nfrom typing import List, Dict, Any\nfrom langflow.custom.custom_component.component import Component\nfrom langflow.io import IntInput, MessageTextInput, Output, SecretStrInput, DropdownInput\nfrom langflow.schema.data import Data\nfrom langflow.schema.message import Message\nimport requests\nimport json\n\n\nclass ApartmentImageAnalyzer(Component):\n    display_name = \"Apartment Image Analyzer\"\n    description = \"Analyzes apartment listing images using vision AI in parallel\"\n    icon = \"image\"\n\n    inputs = [\n        MessageTextInput(\n            name=\"listing_content\",\n            display_name=\"Listing Content\",\n            info=\"Formatted listing content containing image URLs\",\n            required=True,\n        ),\n        SecretStrInput(\n            name=\"openai_api_key\",\n            display_name=\"OpenAI API Key\",\n            required=True,\n            password=True,\n        ),\n        DropdownInput(\n            name=\"model\",\n            display_name=\"Vision Model\",\n            options=[\"gpt-4o\", \"gpt-4o-mini\"],\n            value=\"gpt-4o-mini\",\n            info=\"GPT-4o has better vision analysis, mini is faster/cheaper\",\n        ),\n        IntInput(\n            name=\"max_images\",\n            display_name=\"Max Images to Analyze\",\n            value=5,\n            info=\"Limit number of images to analyze (cost/time control)\",\n        ),\n    ]\n\n    outputs = [\n        Output(\n            display_name=\"Analysis Summary\",\n            name=\"analysis\",\n            method=\"analyze_images\",\n        ),\n    ]\n\n    def _extract_image_urls(self, content: str) -> List[str]:\n        \"\"\"Extract all image URLs from markdown content\"\"\"\n        # Pattern to match markdown images\n        pattern = r'!\\[.*?\\]\\((https://[^\\)]+\\.jpg)\\)'\n        urls = re.findall(pattern, content)\n        \n        # Remove duplicates while preserving order\n        seen = set()\n        unique_urls = []\n        for url in urls:\n            if url not in seen:\n                seen.add(url)\n                unique_urls.append(url)\n        \n        self.log(f\"Extracted {len(unique_urls)} unique image URLs\")\n        return unique_urls\n\n    def _analyze_single_image(self, image_url: str, index: int) -> Dict[str, Any]:\n        \"\"\"Analyze a single image using GPT-4 Vision\"\"\"\n        \n        headers = {\n            \"Content-Type\": \"application/json\",\n            \"Authorization\": f\"Bearer {self.openai_api_key}\"\n        }\n        \n        payload = {\n            \"model\": self.model,\n            \"messages\": [\n                {\n                    \"role\": \"user\",\n                    \"content\": [\n                        {\n                            \"type\": \"text\",\n                            \"text\": \"\"\"Analyze this apartment/property image. Identify:\n1. Room type (living room, bedroom, kitchen, bathroom, exterior, view, etc.)\n2. Key features and condition (modern, renovated, spacious, natural light, etc.)\n3. Furnishing status (furnished, unfurnished, partially furnished)\n4. Notable amenities or highlights\n5. Overall impression (scale 1-10)\n\nBe concise but specific. Focus on details that would matter to a renter.\"\"\"\n                        },\n                        {\n                            \"type\": \"image_url\",\n                            \"image_url\": {\n                                \"url\": image_url,\n                                \"detail\": \"low\"  # Use \"low\" for cost efficiency, \"high\" for more detail\n                            }\n                        }\n                    ]\n                }\n            ],\n            \"max_tokens\": 300\n        }\n        \n        try:\n            response = requests.post(\n                \"https://api.openai.com/v1/chat/completions\",\n                headers=headers,\n                json=payload,\n                timeout=30\n            )\n            response.raise_for_status()\n            result = response.json()\n            \n            analysis = result['choices'][0]['message']['content']\n            \n            return {\n                \"image_number\": index + 1,\n                \"url\": image_url,\n                \"analysis\": analysis,\n                \"success\": True\n            }\n            \n        except Exception as e:\n            self.log(f\"Error analyzing image {index + 1}: {str(e)}\")\n            return {\n                \"image_number\": index + 1,\n                \"url\": image_url,\n                \"analysis\": f\"Error: {str(e)}\",\n                \"success\": False\n            }\n\n    def analyze_images(self) -> Message:\n        \"\"\"Extract and analyze apartment images\"\"\"\n        \n        content = str(self.listing_content)\n        \n        # Extract image URLs\n        image_urls = self._extract_image_urls(content)\n        \n        if not image_urls:\n            self.log(\"No images found in listing content\")\n            return Message(text=\"No images found to analyze\")\n        \n        # Limit to max_images\n        images_to_analyze = image_urls[:self.max_images]\n        self.log(f\"Analyzing {len(images_to_analyze)} images...\")\n        \n        # Analyze images sequentially (for simplicity - can be made async for parallel)\n        analyses = []\n        for idx, url in enumerate(images_to_analyze):\n            self.log(f\"Analyzing image {idx + 1}/{len(images_to_analyze)}\")\n            result = self._analyze_single_image(url, idx)\n            analyses.append(result)\n        \n        # Format results\n        successful = [a for a in analyses if a['success']]\n        failed = len(analyses) - len(successful)\n        \n        summary = f\"\"\"# 📸 Image Analysis Summary\n\n**Total Images Found:** {len(image_urls)}\n**Images Analyzed:** {len(analyses)}\n**Successful:** {len(successful)}\n**Failed:** {failed}\n\n---\n\n## Image Details:\n\n\"\"\"\n        \n        for analysis in analyses:\n            if analysis['success']:\n                summary += f\"\"\"### Image {analysis['image_number']}\n{analysis['analysis']}\n\n---\n\n\"\"\"\n            else:\n                summary += f\"\"\"### Image {analysis['image_number']}\n❌ Analysis failed: {analysis['analysis']}\n\n---\n\n\"\"\"\n        \n        self.log(f\"Completed analysis of {len(successful)} images\")\n        return Message(text=summary)\n\n    def build(self):\n        return self.analyze_images()\n"
+              },
+              "listing_content": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Listing Content",
+                "dynamic": false,
+                "info": "Formatted listing content containing image URLs",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "listing_content",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "max_images": {
+                "_input_type": "IntInput",
+                "advanced": false,
+                "display_name": "Max Images to Analyze",
+                "dynamic": false,
+                "info": "Limit number of images to analyze (cost/time control)",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "max_images",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": 5
+              },
+              "model": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Vision Model",
+                "dynamic": false,
+                "external_options": {},
+                "info": "GPT-4o has better vision analysis, mini is faster/cheaper",
+                "name": "model",
+                "options": [
+                  "gpt-4o",
+                  "gpt-4o-mini"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "gpt-4o-mini"
+              },
+              "openai_api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "OpenAI API Key",
+                "dynamic": false,
+                "info": "",
+                "input_types": [],
+                "load_from_db": true,
+                "name": "openai_api_key",
+                "password": true,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "ApartmentImageAnalyzer"
+        },
+        "dragging": false,
+        "id": "PythonREPLComponent-dWQ1m",
+        "measured": {
+          "height": 467,
+          "width": 320
+        },
+        "position": {
+          "x": 2239.2968319249853,
+          "y": 257.428683106841
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "note-3nBWl",
+          "node": {
+            "description": "## 1\n# User inputs their criteria and a listing URL in the prompt.\n```quote\ni am visiting Switzerland this ski season and i want to hit the slopes! I got my wife and her family coming along, with our two sons. So it will be 6-7 people. we want to be right close to the ski action! we want nice view... and we want the typical swiss style Chalets... check this listing for a match https://www.homegate.ch/rent/4002583790\n```",
+            "display_name": "",
+            "documentation": "",
+            "template": {
+              "backgroundColor": "neutral"
+            }
+          },
+          "type": "note"
+        },
+        "dragging": false,
+        "height": 518,
+        "id": "note-3nBWl",
+        "measured": {
+          "height": 518,
+          "width": 324
+        },
+        "position": {
+          "x": 666.6100710889735,
+          "y": -502.6137276179012
+        },
+        "resizing": false,
+        "selected": false,
+        "type": "noteNode",
+        "width": 324
+      },
+      {
+        "data": {
+          "id": "note-SlCOQ",
+          "node": {
+            "description": "## 2\n# Agent parses message and listing URL.\n```json\n{\n  \"message\": \"i'm visiting Switzerland for...\",\n  \"url\": \"https://....\"\n}```",
+            "display_name": "",
+            "documentation": "",
+            "template": {
+              "backgroundColor": "neutral"
+            }
+          },
+          "type": "note"
+        },
+        "dragging": false,
+        "height": 371,
+        "id": "note-SlCOQ",
+        "measured": {
+          "height": 371,
+          "width": 324
+        },
+        "position": {
+          "x": 1394.5786490060937,
+          "y": -146.7861197538182
+        },
+        "resizing": false,
+        "selected": false,
+        "type": "noteNode",
+        "width": 324
+      },
+      {
+        "data": {
+          "id": "note-EPtBR",
+          "node": {
+            "description": "## 3\n# Agent extracts user’s criteria ‘dynamically’ into JSON.\n### gpt-4.1-nano\n```json\n{\n  \"occupants\": 5,\n  \"duration\": \"ski season\",\n  \"location\": \"ski resort area\",\n  \"additional_requirements\": [\"close to ski slopes\", \"ski-in/ski-out preferred\", \"suitable for 5 people\"]\n}\n```",
+            "display_name": "",
+            "documentation": "",
+            "template": {
+              "backgroundColor": "neutral"
+            }
+          },
+          "type": "note"
+        },
+        "dragging": false,
+        "height": 448,
+        "id": "note-EPtBR",
+        "measured": {
+          "height": 448,
+          "width": 378
+        },
+        "position": {
+          "x": 2184.0275206662363,
+          "y": -700.4159559765569
+        },
+        "resizing": false,
+        "selected": false,
+        "type": "noteNode",
+        "width": 378
+      },
+      {
+        "data": {
+          "id": "note-olMoY",
+          "node": {
+            "description": "## 4\n# Agent calls tool to scrape listing page to extract contents.\n### Firecrawl.dev",
+            "display_name": "",
+            "documentation": "",
+            "template": {
+              "backgroundColor": "neutral"
+            }
+          },
+          "type": "note"
+        },
+        "dragging": false,
+        "height": 324,
+        "id": "note-olMoY",
+        "measured": {
+          "height": 324,
+          "width": 324
+        },
+        "position": {
+          "x": 1497.5771836303757,
+          "y": 571.9043268166964
+        },
+        "resizing": false,
+        "selected": false,
+        "type": "noteNode",
+        "width": 324
+      },
+      {
+        "data": {
+          "id": "note-M1ktd",
+          "node": {
+            "description": "## 5\n# Any images found on the listing page are analyzed using vision models.\n### gpt-4o-mini",
+            "display_name": "",
+            "documentation": "",
+            "template": {
+              "backgroundColor": "neutral"
+            }
+          },
+          "type": "note"
+        },
+        "dragging": false,
+        "height": 340,
+        "id": "note-M1ktd",
+        "measured": {
+          "height": 340,
+          "width": 324
+        },
+        "position": {
+          "x": 2597.3279431060664,
+          "y": 337.7590132311115
+        },
+        "resizing": false,
+        "selected": false,
+        "type": "noteNode",
+        "width": 324
+      },
+      {
+        "data": {
+          "id": "note-lYl77",
+          "node": {
+            "description": "## 6\n# Match the user’s dynamic criteria against listing details.\n# Generate match or no match response.\n# Prettify output.\n\n### gpt-4.1-nano",
+            "display_name": "",
+            "documentation": "",
+            "template": {
+              "backgroundColor": "neutral"
+            }
+          },
+          "type": "note"
+        },
+        "dragging": false,
+        "height": 439,
+        "id": "note-lYl77",
+        "measured": {
+          "height": 439,
+          "width": 324
+        },
+        "position": {
+          "x": 2970.1970220153817,
+          "y": -701.7493059734146
+        },
+        "resizing": false,
+        "selected": false,
+        "type": "noteNode",
+        "width": 324
+      }
+    ],
+    "viewport": {
+      "x": -177.20871336007576,
+      "y": 373.1808079078642,
+      "zoom": 0.3303411138093715
+    }
+  },
+  "description": "Real Estate Personalized Applications",
+  "endpoint_name": null,
+  "id": "208b2ca0-7abf-4533-a74a-9967dd8b1a66",
+  "is_component": false,
+  "last_tested_version": "1.6.2",
+  "name": "REPA Iteration 1 v3",
+  "tags": []
+}
