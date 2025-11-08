@@ -233,11 +233,14 @@ Be concise but specific."""
             response.raise_for_status()
             result = response.json()
             analysis = result['choices'][0]['message']['content']
-            analyses.append(f"### Image {idx + 1}\n{analysis}\n\n---\n\n")
+            # IMPORTANT: Include the URL so the LLM can extract it and display the image
+            analyses.append(f"### Image {idx + 1}\n**Image URL:** {url}\n\n{analysis}\n\n---\n\n")
         except Exception as e:
-            analyses.append(f"### Image {idx + 1}\n❌ Analysis failed: {str(e)}\n\n---\n\n")
+            analyses.append(f"### Image {idx + 1}\n**Image URL:** {url}\n❌ Analysis failed: {str(e)}\n\n---\n\n")
     
-    return "\n".join(analyses)
+    summary = "\n".join(analyses)
+    print(f"[Image Analysis] Completed. Sample output: {summary[:300]}...")
+    return summary
 
 
 def generate_match_report(criteria: dict, listing_data: dict, image_analysis: str = "") -> str:
@@ -245,6 +248,10 @@ def generate_match_report(criteria: dict, listing_data: dict, image_analysis: st
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         raise ValueError("OPENAI_API_KEY not found in environment")
+    
+    # Debug: Check what we're receiving
+    print(f"[Debug generate_match_report] image_analysis length: {len(image_analysis) if image_analysis else 0}")
+    print(f"[Debug generate_match_report] Has valid image analysis: {bool(image_analysis and image_analysis not in ['No images found to analyze', 'Image analysis skipped (no API key)'])}")
     
     system_prompt = """You are a helpful apartment rental advisor for the Swiss market. Your job is to analyze apartment listings and help users determine if they're a good match for their needs.
 
@@ -351,6 +358,9 @@ Return ONLY the formatted match analysis, ready to display to the user."""
         "temperature": 0.1
     }
     
+    # Debug: Print the prompt being sent (first 1000 chars)
+    print(f"[Debug] Prompt being sent to LLM (first 1000 chars):\n{prompt[:1000]}")
+    
     try:
         response = requests.post(
             "https://api.openai.com/v1/chat/completions",
@@ -395,9 +405,12 @@ async def chat(request: ChatRequest):
         # Step 3: Analyze images (optional, can be skipped for speed)
         print(f"[Debug] Starting image analysis...")
         image_analysis = analyze_images(listing_data.get('content', ''), max_images=3)
-        print(f"[Debug] Image analysis result: {image_analysis[:200]}...")  # First 200 chars
+        print(f"[Debug] Image analysis length: {len(image_analysis)}")
+        print(f"[Debug] Image analysis result: {image_analysis[:500]}...")  # First 500 chars
+        print(f"[Debug] Image analysis is valid: {image_analysis not in ['No images found to analyze', 'Image analysis skipped (no API key)']}")
         
         # Step 4: Generate match report
+        print(f"[Debug] Generating match report with image_analysis={bool(image_analysis)}")
         match_report = generate_match_report(criteria, listing_data, image_analysis)
         
         return ChatResponse(
