@@ -372,20 +372,15 @@
     </div>
 
     <!-- Marked.js for markdown rendering -->
-    <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     
     <script>
         const chatContainer = document.getElementById('chatContainer');
         const messageInput = document.getElementById('messageInput');
         const sendButton = document.getElementById('sendButton');
 
-        // Wait for marked.js to load and configure it
-        if (typeof marked !== 'undefined') {
-            marked.setOptions({
-                breaks: true,
-                gfm: true
-            });
-        }
+        // Debug: Check if marked loaded
+        console.log('Marked.js loaded?', typeof marked);
 
         function addMessage(content, isUser = false) {
             const messageDiv = document.createElement('div');
@@ -398,10 +393,36 @@
                 contentDiv.textContent = content;
             } else {
                 // Render markdown for assistant messages
-                if (typeof marked !== 'undefined') {
-                    contentDiv.innerHTML = marked.parse(content);
-                } else {
-                    console.error('Marked.js not loaded, displaying plain text');
+                try {
+                    // Strip code fence markers if present (LLM sometimes wraps response in ```)
+                    let cleanContent = content.trim();
+                    if (cleanContent.startsWith('```')) {
+                        // Remove opening code fence (```markdown, ```json, etc.)
+                        cleanContent = cleanContent.replace(/^```[a-z]*\n/, '');
+                        // Remove closing code fence
+                        cleanContent = cleanContent.replace(/\n```$/, '');
+                    }
+                    
+                    if (typeof marked !== 'undefined' && marked.parse) {
+                        console.log('Using marked.parse');
+                        const html = marked.parse(cleanContent);
+                        console.log('Content length:', cleanContent.length);
+                        console.log('HTML length:', html.length);
+                        console.log('First 200 chars of content:', cleanContent.substring(0, 200));
+                        console.log('First 200 chars of HTML:', html.substring(0, 200));
+                        contentDiv.innerHTML = html;
+                        console.log('innerHTML set, childNodes:', contentDiv.childNodes.length);
+                    } else if (typeof marked !== 'undefined') {
+                        console.log('Using marked() function');
+                        contentDiv.innerHTML = marked(cleanContent);
+                    } else {
+                        console.error('Marked.js not available, showing plain text');
+                        contentDiv.style.whiteSpace = 'pre-wrap';
+                        contentDiv.textContent = cleanContent;
+                    }
+                } catch (e) {
+                    console.error('Error rendering markdown:', e);
+                    contentDiv.style.whiteSpace = 'pre-wrap';
                     contentDiv.textContent = content;
                 }
             }
