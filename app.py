@@ -259,13 +259,19 @@ Be friendly, conversational, and encouraging. Extract all relevant details accur
 Listing data:
 {listing_data.get('content', '')}
 
-{f"Image Analysis:\\n{image_analysis}" if image_analysis else ""}
+---
+
+{f'''## Image Analysis Results:
+{image_analysis}
+
+**INSTRUCTION: You MUST include these image analysis results in a "📸 Photo Analysis" section in your output. Summarize the key findings from each image analysis above.**
+''' if image_analysis and image_analysis not in ["No images found to analyze", "Image analysis skipped (no API key)"] else ''}
 
 ---
 
 ## Your Task:
 
-Analyze this apartment listing and create a beautiful, user-friendly match report.
+Analyze this apartment listing and create a beautiful, user-friendly match report{" that includes the image analysis findings" if image_analysis and image_analysis not in ["No images found to analyze", "Image analysis skipped (no API key)"] else ""}.
 
 ### Output Format (use emojis and clear formatting):
 
@@ -306,6 +312,14 @@ Analyze this apartment listing and create a beautiful, user-friendly match repor
 
 ---
 
+{f'''## 📸 Photo Analysis
+
+[Include the image analysis provided above. For each analyzed image, summarize the key findings about room type, condition, and features. Make it scannable and informative.]
+
+---
+
+''' if image_analysis and image_analysis not in ["No images found to analyze", "Image analysis skipped (no API key)"] else ''}
+
 ## 🤔 Our Recommendation
 
 **[HIGHLY RECOMMENDED / WORTH CONSIDERING / NOT A GOOD FIT]**
@@ -318,6 +332,8 @@ Analyze this apartment listing and create a beautiful, user-friendly match repor
 
 [Actionable steps]
 ```
+
+{"IMPORTANT: If image analysis was provided above, you MUST include a '📸 Photo Analysis' section in your response that summarizes the image findings." if image_analysis and image_analysis not in ["No images found to analyze", "Image analysis skipped (no API key)"] else ""}
 
 Return ONLY the formatted match analysis, ready to display to the user."""
 
