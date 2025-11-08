@@ -120,18 +120,74 @@ Available field names you may use (only if mentioned):
 
 For ANY other requirements (pet-friendly, balcony, parking, proximity to amenities, etc.), add them to an "additional_requirements" array.
 
-Return ONLY valid JSON, no explanations."""
+Extraction Rules:
+1. If "for X persons/people" → use "occupants": X
+2. If "ski season" or temporary → use "duration": "ski season" or appropriate period
+3. If "price is not a problem" or "budget flexible" → do NOT include min_rent or max_rent
+4. If "more than X rooms" → use "min_rooms": X
+5. If "less than CHF Y" → use "max_rent": Y
+6. If "about X square meters" → use both "min_living_space" and "max_living_space" with ±10% range
+7. Location can be specific (city/postal code) OR proximity-based ("close to ski", "near train station")
+8. Extract EACH specific requirement as a separate item in additional_requirements
+9. Preserve the user's exact wording and intent
+10. Infer room requirements from occupancy if helpful (e.g., 5 persons might suggest larger apartment)
+11. Return ONLY valid JSON, no explanations
+
+Example 1 - Full numeric criteria:
+Input: "I am looking for an apartment in 8008 Zürich, more than 4 rooms, living space about 100 square meters, and rent less than CHF 5000."
+Output:
+{
+  "location": "8008 Zürich",
+  "min_rooms": 4,
+  "min_living_space": 90,
+  "max_living_space": 110,
+  "max_rent": 5000
+}
+
+Example 2 - Seasonal/proximity focused:
+Input: "I'm visiting Switzerland for a ski season and need an apartment for 5 persons, need it to be super close to the ski action. Price is not a problem."
+Output:
+{
+  "occupants": 5,
+  "duration": "ski season",
+  "location": "ski resort area",
+  "additional_requirements": ["close to ski slopes", "ski-in/ski-out preferred", "suitable for 5 people"]
+}
+
+Example 3 - Mixed criteria:
+Input: "Looking for 3 rooms in Zürich, max CHF 3000, with parking space, balcony, and modern kitchen"
+Output:
+{
+  "location": "Zürich",
+  "min_rooms": 3,
+  "max_rent": 3000,
+  "additional_requirements": ["parking space", "balcony", "modern kitchen"]
+}
+
+Example 4 - Only location:
+Input: "I need an apartment in Bern"
+Output:
+{
+  "location": "Bern"
+}
+
+Now extract the criteria:"""
 
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json"
     }
     
+    user_prompt = f"""Now extract the criteria from the User's Request:
+<user_request>
+{user_message}
+</user_request>"""
+    
     payload = {
         "model": "gpt-4o-mini",
         "messages": [
             {"role": "system", "content": system_prompt},
-            {"role": "user", "content": f"Extract criteria from: {user_message}"}
+            {"role": "user", "content": user_prompt}
         ],
         "temperature": 0.1
     }
@@ -201,14 +257,14 @@ def analyze_images(listing_content: str, max_images: int = 5) -> str:
                     "content": [
                         {
                             "type": "text",
-                            "text": """Analyze this apartment image. Identify:
-1. Room type
-2. Key features and condition
-3. Furnishing status
-4. Notable amenities
+                            "text": """Analyze this apartment/property image. Identify:
+1. Room type (living room, bedroom, kitchen, bathroom, exterior, view, etc.)
+2. Key features and condition (modern, renovated, spacious, natural light, etc.)
+3. Furnishing status (furnished, unfurnished, partially furnished)
+4. Notable amenities or highlights
 5. Overall impression (scale 1-10)
 
-Be concise but specific."""
+Be concise but specific. Focus on details that would matter to a renter."""
                         },
                         {
                             "type": "image_url",
@@ -255,35 +311,90 @@ def generate_match_report(criteria: dict, listing_data: dict, image_analysis: st
     
     system_prompt = """You are a helpful apartment rental advisor for the Swiss market. Your job is to analyze apartment listings and help users determine if they're a good match for their needs.
 
-Be friendly, conversational, and encouraging. Extract all relevant details accurately from listings. Compare listings objectively against the user's specific criteria. Only evaluate criteria the user explicitly mentioned. Be realistic about "close enough" matches. Provide honest, actionable recommendations."""
+## Your Approach:
+- Be friendly, conversational, and encouraging
+- Extract all relevant details accurately from listings
+- Compare listings objectively against the user's specific criteria
+- Only evaluate criteria the user explicitly mentioned - don't penalize for unspecified requirements
+- Be realistic about "close enough" matches (e.g., 95m² ≈ 100m², Zürich City ≈ 8008 Zürich)
+- Distinguish between deal-breakers and nice-to-haves
+- Provide honest, actionable recommendations
 
-    # Build the prompt
+## Swiss Rental Context:
+- Understand Swiss room counting (e.g., 3.5 rooms = 2 bedrooms + living room + half room)
+- Know typical Zürich pricing and neighborhoods
+- Recognize common Swiss rental terms and amenities
+- Consider public transport accessibility and local area quality
+
+## Tone:
+- Professional yet warm
+- Clear and direct
+- Helpful and supportive
+- Honest about both positives and concerns
+
+Follow the exact output format provided in the user's request."""
+
+    # Determine if we have images to display
+    has_images = image_analysis and image_analysis not in ["No images found to analyze", "Image analysis skipped (no API key)"]
+    
+    image_analysis_section = ""
+    if has_images:
+        image_analysis_section = f"""## Image Analysis Results:
+{image_analysis}
+"""
+    
+    image_gallery_section = ""
+    if has_images:
+        image_gallery_section = """## 📸 Photo Analysis
+
+**INSTRUCTION:** Extract all image URLs from the Image Analysis section and create a beautiful photo gallery here. For each analyzed image:
+1. Display the image using: ![Room Name](image_url)
+2. Add a brief caption based on the analysis
+
+Example format:
+### Living Room
+![Living Room](https://media2.homegate.ch/.../image1.jpg)
+*Modern, spacious living area with natural light and contemporary furnishing.*
+
+### Kitchen
+![Kitchen](https://media2.homegate.ch/.../image2.jpg)
+*Fully equipped kitchen with modern appliances and ample counter space.*
+
+Continue for all analyzed images..."""
+    
+    with_images = " with photo gallery" if has_images else ""
+
+    # Build the user prompt
     prompt = f"""User's criteria:
 ```json
 {json.dumps(criteria, indent=2)}
 ```
 
 Listing data:
+<listing>
 {listing_data.get('content', '')}
+</listing>
 
----
-
-{f'''## Image Analysis Results:
-{image_analysis}
-
-**INSTRUCTION: You MUST include these image analysis results in a "📸 Photo Analysis" section in your output. Summarize the key findings from each image analysis above.**
-''' if image_analysis and image_analysis not in ["No images found to analyze", "Image analysis skipped (no API key)"] else ''}
+{image_analysis_section}
 
 ---
 
 ## Your Task:
 
-Analyze this apartment listing and create a beautiful, user-friendly match report{" that includes the image analysis findings" if image_analysis and image_analysis not in ["No images found to analyze", "Image analysis skipped (no API key)"] else ""}.
+Analyze this apartment listing and create a beautiful, user-friendly match report{with_images}.
+
+**CRITICAL IMAGE INSTRUCTION:** 
+The listing data contains a **LISTING_IMAGE_URL:** field. You MUST extract the COMPLETE URL (do not truncate it) and insert it at the very top of your response using this EXACT format:
+![Apartment](COMPLETE_URL_HERE)
+
+Make sure to copy the entire URL exactly as provided, including all characters after the last slash.
 
 ### Output Format (use emojis and clear formatting):
 
 ```
 # 🏠 Apartment Match Analysis
+
+![Apartment](INSERT_COMPLETE_LISTING_IMAGE_URL_HERE)
 
 ## 📋 Listing Summary
 **Title:** [listing title]
@@ -303,44 +414,109 @@ Analyze this apartment listing and create a beautiful, user-friendly match repor
 
 ## ✅ What Matches Your Criteria
 
-[For EACH criterion that matches]
+[For EACH criterion that matches, use this format:]
+**✓ [Criterion Name]**
+• Your requirement: [what user asked for]
+• Listing offers: [what listing has]
+• Assessment: [brief positive note]
 
 ---
 
 ## ⚠️ Points to Consider
 
-[For EACH criterion that doesn't match or is unclear]
+[For EACH criterion that doesn't match or is unclear:]
+**⚠ [Criterion Name]**
+• Your requirement: [what user asked for]
+• Listing offers: [what listing has]
+• Impact: [why this matters - deal-breaker or negotiable?]
+
+[If no concerns: *No significant concerns - all criteria met!*]
 
 ---
 
 ## 💡 Key Highlights
 
-• [Standout features]
+• [Standout feature 1]
+• [Standout feature 2]
+• [Standout feature 3]
+• [Other notable amenities]
 
 ---
 
-{f'''## 📸 Photo Analysis
-
-[Include the image analysis provided above. For each analyzed image, summarize the key findings about room type, condition, and features. Make it scannable and informative.]
+{image_gallery_section}
 
 ---
-
-''' if image_analysis and image_analysis not in ["No images found to analyze", "Image analysis skipped (no API key)"] else ''}
 
 ## 🤔 Our Recommendation
 
 **[HIGHLY RECOMMENDED / WORTH CONSIDERING / NOT A GOOD FIT]**
 
-[2-3 sentences explaining why]
+[2-3 sentences explaining why, considering the user's priorities and the listing's strengths/weaknesses. Be honest and helpful.]
 
 ---
 
 ## 📌 Next Steps
 
-[Actionable steps]
+[If recommended: Suggest they contact the landlord, schedule viewing, etc.]
+[If not recommended: Suggest what to look for instead]
+
+---
+
+[ONLY IF HIGHLY RECOMMENDED OR WORTH CONSIDERING:]
+
+## ✉️ Personalized Contact Message
+
+Ready to send! Copy this message for the "Contact Advertiser" form on Homegate.ch:
+
+---
+**Subject:** Interest in [Room count]-Room Apartment at [Location]
+
+Dear Sir/Madam,
+
+I am writing to express my strong interest in the [room count]-room apartment at [address/location] listed for CHF [price]/month.
+
+[Include 2-3 sentences about why this apartment is perfect for them based on their criteria - be specific! Reference actual matches like "The 105m² living space and location in 8008 Zürich are exactly what I've been searching for."]
+
+About me:
+• [Infer likely tenant profile based on their search - e.g., "Professional working in Zürich" or "Small family" based on room requirements]
+• Reliable, non-smoking tenant with excellent references
+• Available to move in [reference availability date from listing or say "immediately"]
+• Long-term rental desired
+
+I am very interested in scheduling a viewing at your earliest convenience. I am flexible with timing and can meet this week if possible.
+
+I have prepared all necessary documents (employment contract, salary statements, references) and am ready to proceed quickly given the competitive Zürich rental market.
+
+Looking forward to hearing from you.
+
+Best regards,
+[Your Name]
+[Your Phone]
+[Your Email]
+---
+
+**Tip:** Personalize further by adding:
+- Your current situation (relocating, growing family, etc.)
+- Why you chose this specific listing
+- Your move-in timeline
+- Any relevant lifestyle details (quiet, respectful neighbor, etc.)
+
+Good apartments in Zürich get many applications - send this today! ⚡
 ```
 
-{"IMPORTANT: If image analysis was provided above, you MUST include a '📸 Photo Analysis' section in your response that summarizes the image findings." if image_analysis and image_analysis not in ["No images found to analyze", "Image analysis skipped (no API key)"] else ""}
+### Important Instructions:
+1. **Be conversational and friendly** - write like you're helping a friend
+2. **Use emojis** to make it visually appealing and scannable
+3. **Be honest** - if something doesn't match, say so clearly
+4. **Prioritize** - focus on what matters most (deal-breakers vs nice-to-haves)
+5. **Only compare specified criteria** - don't penalize for unspecified requirements
+6. **Extract all listing details** - even if not in criteria (they're useful to see)
+7. **Be realistic** - 95m² is close enough to 100m², Zürich City ≈ 8008 Zürich
+8. **Consider Swiss context** - room counting, pricing norms, etc.
+9. **Make it actionable** - give clear next steps
+10. **Generate contact message ONLY for recommended listings** - skip this section if "NOT A GOOD FIT"
+11. **Personalize the contact message** based on the user's actual criteria matches (be specific about what matched!)
+12. **Make the contact message professional yet warm** - increase their chances in competitive market
 
 Return ONLY the formatted match analysis, ready to display to the user."""
 
