@@ -379,11 +379,13 @@
         const messageInput = document.getElementById('messageInput');
         const sendButton = document.getElementById('sendButton');
 
-        // Configure marked options
-        marked.setOptions({
-            breaks: true,
-            gfm: true
-        });
+        // Wait for marked.js to load and configure it
+        if (typeof marked !== 'undefined') {
+            marked.setOptions({
+                breaks: true,
+                gfm: true
+            });
+        }
 
         function addMessage(content, isUser = false) {
             const messageDiv = document.createElement('div');
@@ -396,7 +398,12 @@
                 contentDiv.textContent = content;
             } else {
                 // Render markdown for assistant messages
-                contentDiv.innerHTML = marked.parse(content);
+                if (typeof marked !== 'undefined') {
+                    contentDiv.innerHTML = marked.parse(content);
+                } else {
+                    console.error('Marked.js not loaded, displaying plain text');
+                    contentDiv.textContent = content;
+                }
             }
             
             messageDiv.appendChild(contentDiv);
